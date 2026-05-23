@@ -1,0 +1,4086 @@
+{
+  "traces_dir": "traces",
+  "n_traces": 433,
+  "n_retrieval_bearing": 323,
+  "no_retrieval": 110,
+  "mean_entity_coverage": 0.8076,
+  "mean_by_model": {
+    "claude-haiku-4-5": 0.8765,
+    "claude-opus-4-7": 0.7757,
+    "claude-sonnet-4-6": 0.7796
+  },
+  "traces": [
+    {
+      "run_id": "c0442af1ab8e",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "cea4daaa81b3",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "40c88c8de6fd",
+      "model": "claude-opus-4-7",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869']"
+      ]
+    },
+    {
+      "run_id": "2180d9fb2a55",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['300,000 km/s', '299,792.458 km/s. Source']"
+      ]
+    },
+    {
+      "run_id": "3423b09f1d9f",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.818,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Tibet', 'Hawaii']"
+      ]
+    },
+    {
+      "run_id": "128bac480ed7",
+      "model": "claude-opus-4-7",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.7,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1962', 'Nobel Prize in Physiology or Medicine for the discovery', 'Photo 51']"
+      ]
+    },
+    {
+      "run_id": "1ccb2b664e2b",
+      "model": "claude-opus-4-7",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969', 'Buzz Aldrin']"
+      ]
+    },
+    {
+      "run_id": "be9dcca33642",
+      "model": "claude-opus-4-7",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.571,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1921 Nobel Prize', '1922', 'Theoretical Physics']"
+      ]
+    },
+    {
+      "run_id": "321dcd072fd7",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.579,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['roughly 384,000 km', 'about 3 km', 'thousands of kilometers', 'Earth', 'a few hundred kilometers', 'Yang Liwei', '2003', \"Richard Halliburton's\"]"
+      ]
+    },
+    {
+      "run_id": "fdb8c458450e",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.444,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['France', 'the Supreme Executive Council of Pennsylvania', 'U.S', 'George Washington', '1789']"
+      ]
+    },
+    {
+      "run_id": "f6adaecc9e41",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "ad71df6e4a86",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "270f10b5312a",
+      "model": "claude-opus-4-7",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Sydney', 'New South Wales']"
+      ]
+    },
+    {
+      "run_id": "3d390e2a85a0",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.375,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Hawaii', '13,796 ft', 'the Pacific Ocean', 'about 33,000 ft', 'Mount Everest']"
+      ]
+    },
+    {
+      "run_id": "b95e2d335fd9",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "bb5672b7753f",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "16373de3b200",
+      "model": "claude-sonnet-4-6",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.6,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869', 'German']"
+      ]
+    },
+    {
+      "run_id": "653d9bf5fa4b",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": [
+        "no entities to verify"
+      ]
+    },
+    {
+      "run_id": "5e14c31bce57",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['8,848.86 meters', '29,031.7 feet', 'Hawaii', 'about 10,210 meters', '33,500 ft']"
+      ]
+    },
+    {
+      "run_id": "4b01c1e62ae9",
+      "model": "claude-sonnet-4-6",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.583,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Nature', 'April 1953', 'the Nobel Prize in Physiology or Medicine', '1962', 'the Nobel Prize']"
+      ]
+    },
+    {
+      "run_id": "71ce4f6243fb",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 16, 1969', 'July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "6e0e5675f6bd",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Nobel Prize', 'The Nobel Committee']"
+      ]
+    },
+    {
+      "run_id": "29c29f89ba6c",
+      "model": "claude-sonnet-4-6",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.533,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['15–30 feet', '~384,400 km', 'about 3 kilometres', '2 miles', 'the International Space Station', '~400 km', 'as early as 1932']"
+      ]
+    },
+    {
+      "run_id": "3f7236be5f7c",
+      "model": "claude-sonnet-4-6",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['France', 'the Declaration of Independence']"
+      ]
+    },
+    {
+      "run_id": "a4aaf3dd6d7f",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.6,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['today', '47']"
+      ]
+    },
+    {
+      "run_id": "b917ad96870e",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": [
+        "no entities to verify"
+      ]
+    },
+    {
+      "run_id": "5474c8bc6941",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "48b50ed92cf5",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.556,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Hawaii', 'about 10,210 meters', '33,500 feet', 'over 1,000 meters']"
+      ]
+    },
+    {
+      "run_id": "4eaf1b0ab9cc",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "c65136194874",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "765dc032e920",
+      "model": "claude-haiku-4-5",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "31c22a664094",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.2,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792 km', '299,792.458 km/s', '299,792,458 meters', 'approximately 299,792 kilometers']"
+      ]
+    },
+    {
+      "run_id": "4d362d895a81",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['8,850 meters', '29,035 feet']"
+      ]
+    },
+    {
+      "run_id": "52a19295a7ff",
+      "model": "claude-haiku-4-5",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "b24338bdfc21",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f8e7da375828",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.778,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Nobel Prize in Physics', 'the Nobel Prize']"
+      ]
+    },
+    {
+      "run_id": "2d9cafd3317d",
+      "model": "claude-haiku-4-5",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['approximately 384,399 km']"
+      ]
+    },
+    {
+      "run_id": "f42ee99a9959",
+      "model": "claude-haiku-4-5",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1706-1790', '1853-1857', '1933-1945']"
+      ]
+    },
+    {
+      "run_id": "f744c7a4dfd0",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 4,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['January 2025']"
+      ]
+    },
+    {
+      "run_id": "b02b93dbb6ae",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "20f7677fbe70",
+      "model": "claude-haiku-4-5",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Sydney Wikipedia']"
+      ]
+    },
+    {
+      "run_id": "84fac3a1e7d4",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 2,
+      "score": 0.556,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['approximately 10,210 meters', '33,500 feet', \"Mount Everest's\", '8,848.86 meters']"
+      ]
+    },
+    {
+      "run_id": "9bafcf3cb5eb",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "a1616653970d",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "1b8e3289bdf9",
+      "model": "claude-opus-4-7",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869']"
+      ]
+    },
+    {
+      "run_id": "62470873cd8f",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['300,000 km/s']"
+      ]
+    },
+    {
+      "run_id": "ac003f5fb44e",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Tibet', 'Hawaii']"
+      ]
+    },
+    {
+      "run_id": "14a6e2dff452",
+      "model": "claude-opus-4-7",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Photo 51', '1962', 'Nobel Prize in Physiology or Medicine for the discovery']"
+      ]
+    },
+    {
+      "run_id": "b45c12782167",
+      "model": "claude-opus-4-7",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969', 'Buzz Aldrin']"
+      ]
+    },
+    {
+      "run_id": "6bb55fb6989f",
+      "model": "claude-opus-4-7",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1922', 'Theoretical Physics']"
+      ]
+    },
+    {
+      "run_id": "97e2fc186d32",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.533,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['about 384,000 km', 'Earth', 'roughly 5–9 meters', 'about 3 km', 'as early as 1932', 'Yang Liwei', '2003']"
+      ]
+    },
+    {
+      "run_id": "01f1668facc2",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.556,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Supreme Executive Council of Pennsylvania', '1785 to 1788', 'George Washington', '1789']"
+      ]
+    },
+    {
+      "run_id": "fc3ead5239fa",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "134f291e56c5",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "edc2188daea1",
+      "model": "claude-opus-4-7",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7b35b22b86e0",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Pacific Ocean', \"Mount Everest's\"]"
+      ]
+    },
+    {
+      "run_id": "e929cb0cc8d0",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 1969']"
+      ]
+    },
+    {
+      "run_id": "0aff43f2734a",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "eef44be229f6",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "1b513b0ff953",
+      "model": "claude-opus-4-7",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Sahara Desert', 'Nile River', 'Niger River\" Wikipedia']"
+      ]
+    },
+    {
+      "run_id": "59f5d9727cac",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7955e025c56a",
+      "model": "claude-opus-4-7",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.9,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869']"
+      ]
+    },
+    {
+      "run_id": "a00cdec5bc73",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792.458 km/s']"
+      ]
+    },
+    {
+      "run_id": "3a3cb031e9ef",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Tibet', 'Hawaii']"
+      ]
+    },
+    {
+      "run_id": "75690e5c4d8a",
+      "model": "claude-opus-4-7",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.818,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1962', 'Nobel Prize with']"
+      ]
+    },
+    {
+      "run_id": "d2dc765f3bc8",
+      "model": "claude-opus-4-7",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969', 'Buzz Aldrin']"
+      ]
+    },
+    {
+      "run_id": "d483e963a5f8",
+      "model": "claude-opus-4-7",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1922', 'Theoretical Physics']"
+      ]
+    },
+    {
+      "run_id": "dca699a0dc06",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.438,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['roughly 384,000 km', 'Earth', 'about 3 km', 'about 9 meters', '1932', 'Ripley', 'Yang Liwei', '2003', 'Apollo']"
+      ]
+    },
+    {
+      "run_id": "2da0c3d24898",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['U.S', 'France', 'the Supreme Executive Council of Pennsylvania', '1785–1788', 'George Washington', '1789']"
+      ]
+    },
+    {
+      "run_id": "c56751b030da",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "1bfb258ccfae",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "3b5ae4b8bcaf",
+      "model": "claude-opus-4-7",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Sydney']"
+      ]
+    },
+    {
+      "run_id": "3613150929b8",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Pacific Ocean', \"Mount Everest's\"]"
+      ]
+    },
+    {
+      "run_id": "be6883c9ec0f",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1969']"
+      ]
+    },
+    {
+      "run_id": "a30da63fad99",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "02328ba46bab",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "4497033ff09f",
+      "model": "claude-opus-4-7",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Sahara Desert', 'approximately 7,088 km']"
+      ]
+    },
+    {
+      "run_id": "b17a56f47d96",
+      "model": "claude-opus-4-7",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 1,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Stageira', 'present-day', 'Central Macedonia']"
+      ]
+    },
+    {
+      "run_id": "7caab906ea2e",
+      "model": "claude-opus-4-7",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['George Washington']"
+      ]
+    },
+    {
+      "run_id": "5a5486675baf",
+      "model": "claude-opus-4-7",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 1,
+      "score": 0.429,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Eiffel Tower', 'Paris', 'today', 'Eiffel Tower']"
+      ]
+    },
+    {
+      "run_id": "caf25931982b",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "b489c33d0295",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "38fd442af503",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 8,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the List of Presidents of']"
+      ]
+    },
+    {
+      "run_id": "464d802ad4be",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "4b34f53462a5",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "d672806f381d",
+      "model": "claude-opus-4-7",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869']"
+      ]
+    },
+    {
+      "run_id": "390ceddc8d7b",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792.458 km/s', 'about 300,000 km/s. Source']"
+      ]
+    },
+    {
+      "run_id": "f82b755adfea",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Tibet Autonomous Region', 'Hawaii']"
+      ]
+    },
+    {
+      "run_id": "2256bea5ed0e",
+      "model": "claude-opus-4-7",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.818,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1962', 'Nobel Prize in Physiology or Medicine for the discovery']"
+      ]
+    },
+    {
+      "run_id": "2ae0c0be67b7",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.455,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['U.S', 'France', 'the Supreme Executive Council of Pennsylvania', '1785–1788', 'George Washington', '1789']"
+      ]
+    },
+    {
+      "run_id": "2629da2453ae",
+      "model": "claude-opus-4-7",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "ca5ab8cb16a4",
+      "model": "claude-opus-4-7",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1921 Nobel Prize', 'Theoretical Physics', 'The Nobel Committee']"
+      ]
+    },
+    {
+      "run_id": "b34d50e018ff",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.471,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['roughly 384,000 km', '239,000 miles', 'Earth', 'Yang Liwei', 'Shenzhou 5', '2003', 'Apollo', 'as early as 1932', 'Ripley']"
+      ]
+    },
+    {
+      "run_id": "944aa52c4ba5",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.545,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['U.S', 'the Supreme Executive Council of Pennsylvania', '1785 to 1788', 'George Washington', '1789']"
+      ]
+    },
+    {
+      "run_id": "a387aca418d3",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "2ec88774518f",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7cb191509ec6",
+      "model": "claude-opus-4-7",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Sydney', 'New South Wales']"
+      ]
+    },
+    {
+      "run_id": "a38f6cfe02f8",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Pacific Ocean', \"Mount Everest's\"]"
+      ]
+    },
+    {
+      "run_id": "31eda4142837",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1969']"
+      ]
+    },
+    {
+      "run_id": "419f065afbf0",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "fe25fbe2dc26",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "287b62220e67",
+      "model": "claude-opus-4-7",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Sahara Desert', 'Nile River', 'Niger River\" Wikipedia']"
+      ]
+    },
+    {
+      "run_id": "5b2c5e9c8f1e",
+      "model": "claude-opus-4-7",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['today', 'Greece']"
+      ]
+    },
+    {
+      "run_id": "39fb67740b7c",
+      "model": "claude-opus-4-7",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['George Washington', 'Washington']"
+      ]
+    },
+    {
+      "run_id": "deb2d62a25a3",
+      "model": "claude-opus-4-7",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Eiffel Tower', 'Paris', 'today']"
+      ]
+    },
+    {
+      "run_id": "ccdf6cb05434",
+      "model": "claude-opus-4-7",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 2,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['25 years']"
+      ]
+    },
+    {
+      "run_id": "d9587775bc09",
+      "model": "claude-opus-4-7",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 2,
+      "score": 0.583,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['25 December 1642', '20 March 1727', 'age 84', 'age 76', 'about 8 years']"
+      ]
+    },
+    {
+      "run_id": "9f2425a42c88",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e3b2820239ca",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f398024b0c4a",
+      "model": "claude-opus-4-7",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "1b0116bcebc4",
+      "model": "claude-opus-4-7",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 1,
+      "score": 0.636,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['January 1610', 'Europa', 'Ganymede', 'Callisto']"
+      ]
+    },
+    {
+      "run_id": "14ae41b86557",
+      "model": "claude-opus-4-7",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 1,
+      "score": 0.278,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['no Nobel Prize in Mathematics — Alfred Nobel', '2000', 'the \"Nobel Prize of mathematics', 'The Fields Medal', 'every four years', 'the nearest years', '1998', '2002', 'The Abel Prize', '2003', 'Wolf Prize', 'Mathematics 2000', 'Raoul Bott']"
+      ]
+    },
+    {
+      "run_id": "74375b66ba35",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Hg']"
+      ]
+    },
+    {
+      "run_id": "c982d37794e8",
+      "model": "claude-opus-4-7",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['mid-2024', 'roughly 56%']"
+      ]
+    },
+    {
+      "run_id": "8930d706b511",
+      "model": "claude-opus-4-7",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "b4382c687713",
+      "model": "claude-opus-4-7",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "6c3bb1f059dd",
+      "model": "claude-opus-4-7",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f9dd9cd169b9",
+      "model": "claude-opus-4-7",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['km²']"
+      ]
+    },
+    {
+      "run_id": "663c034ea563",
+      "model": "claude-opus-4-7",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 2,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['~143,000 km']"
+      ]
+    },
+    {
+      "run_id": "0408e1b35a08",
+      "model": "claude-opus-4-7",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 2,
+      "score": 0.7,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['about 165,250,000 km²', '63,800,000 sq mi', 'about 85,133,000 km²']"
+      ]
+    },
+    {
+      "run_id": "38ab205507d4",
+      "model": "claude-opus-4-7",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 2,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['4 January 1643', '25 December 1642', 'about 79 years later']"
+      ]
+    },
+    {
+      "run_id": "e4b80d8fce57",
+      "model": "claude-opus-4-7",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e4afff918bb7",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "ae1e146d0175",
+      "model": "claude-sonnet-4-6",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869', 'German']"
+      ]
+    },
+    {
+      "run_id": "3c77ec7d2caa",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": [
+        "no entities to verify"
+      ]
+    },
+    {
+      "run_id": "05b8a917e6fd",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['8,848.86 meters', '29,031.7 feet', 'Hawaii', 'about 10,210 meters', '33,500 ft']"
+      ]
+    },
+    {
+      "run_id": "71dd2711f02f",
+      "model": "claude-sonnet-4-6",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Nature', 'April 1953', 'the Nobel Prize in Physiology or Medicine', '1962']"
+      ]
+    },
+    {
+      "run_id": "97d9bb6cd8be",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "642cada7b8c9",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Nobel Prize', 'the Nobel Committee']"
+      ]
+    },
+    {
+      "run_id": "565fb7993eb0",
+      "model": "claude-sonnet-4-6",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 4,
+      "score": 0.474,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['approximately 380,000 km', '240,000 miles', '9 metres', '15–30 feet', '3 kilometres', '~420 km', 'Yang Liwei', '2003', '1932', 'the 20th century']"
+      ]
+    },
+    {
+      "run_id": "cff7bab9009f",
+      "model": "claude-sonnet-4-6",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Declaration of Independence', 'George Washington', 'John Adams', 'Thomas Jefferson', '1790']"
+      ]
+    },
+    {
+      "run_id": "5ebc997e0b55",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.6,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['today', '47']"
+      ]
+    },
+    {
+      "run_id": "4512137206f9",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "d868e820b117",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e8ef36264907",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 2,
+      "score": 0.545,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['only 4,207.3 meters', '9,330 meters', '30,610 feet', \"Mount Everest's\", '8,848.86 meters']"
+      ]
+    },
+    {
+      "run_id": "b758ea95ae50",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 1969']"
+      ]
+    },
+    {
+      "run_id": "94a46feb9848",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['59 °F']"
+      ]
+    },
+    {
+      "run_id": "e96d9156c729",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "420b32e91008",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Nile River', 'the Congo River']"
+      ]
+    },
+    {
+      "run_id": "04470a3bc51a",
+      "model": "claude-sonnet-4-6",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 3,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "3483bff6a786",
+      "model": "claude-sonnet-4-6",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7fa601a43c21",
+      "model": "claude-sonnet-4-6",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 3,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "8056cf08ffd6",
+      "model": "claude-sonnet-4-6",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 2,
+      "score": 0.571,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['28 July 1914', 'July 28, 1914 to September 1, 1939', '25 years']"
+      ]
+    },
+    {
+      "run_id": "87637c47d320",
+      "model": "claude-sonnet-4-6",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 2,
+      "score": 0.455,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['January 4, 1643', 'March 31, 1727', 'March 14, 1879', 'April 18, 1955', '76', 'about 8 years']"
+      ]
+    },
+    {
+      "run_id": "53d63d580c3c",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "6610946db840",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e2a4cbdea0fb",
+      "model": "claude-sonnet-4-6",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "276db3fc230f",
+      "model": "claude-sonnet-4-6",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Europa', 'Ganymede', 'Callisto', 'Venus']"
+      ]
+    },
+    {
+      "run_id": "7407db3edd4d",
+      "model": "claude-sonnet-4-6",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 1,
+      "score": 0.2,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['no Nobel Prize in Mathematics', 'Nobel Prize for Mathematics', 'Fields Medal', 'every four years', 'the age of 40', 'Abel Prize', '2003', 'around the year 2000']"
+      ]
+    },
+    {
+      "run_id": "74382331abb5",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f843fe009575",
+      "model": "claude-sonnet-4-6",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f20ac3f4a97b",
+      "model": "claude-sonnet-4-6",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "a832002a0a00",
+      "model": "claude-sonnet-4-6",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 1,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Spartan King Menelaus']"
+      ]
+    },
+    {
+      "run_id": "24549741c26b",
+      "model": "claude-sonnet-4-6",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Colombia', 'South American']"
+      ]
+    },
+    {
+      "run_id": "e05f5fd1a08a",
+      "model": "claude-sonnet-4-6",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 6,
+      "score": 0.6,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['km²', 'Geography of Canada Wikipedia']"
+      ]
+    },
+    {
+      "run_id": "640dd4673b4d",
+      "model": "claude-sonnet-4-6",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 6,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['139,820 km']"
+      ]
+    },
+    {
+      "run_id": "3582cc8f91ec",
+      "model": "claude-sonnet-4-6",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['km²', '63,800,000 sq mi', '~85,133,000 km²']"
+      ]
+    },
+    {
+      "run_id": "3d52ab6b5bea",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 2,
+      "score": 0.7,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['January 1643', '79 years', 'just about a year']"
+      ]
+    },
+    {
+      "run_id": "88d58fd689a1",
+      "model": "claude-sonnet-4-6",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "416c5a673201",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "76fc65b7ef99",
+      "model": "claude-haiku-4-5",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "03b6ffc8ce83",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.0,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792.458 km/s', '299,792,458 meters']"
+      ]
+    },
+    {
+      "run_id": "1e1c2a907132",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['8,850 meters', '29,035 feet', 'Tibet']"
+      ]
+    },
+    {
+      "run_id": "d042a7a7f2d5",
+      "model": "claude-haiku-4-5",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "00189784924e",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Wikipedia - Moon']"
+      ]
+    },
+    {
+      "run_id": "fde2982ad74a",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Nobel Prize in Physics']"
+      ]
+    },
+    {
+      "run_id": "1f29dac2161c",
+      "model": "claude-haiku-4-5",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "0f01965e4adb",
+      "model": "claude-haiku-4-5",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.818,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1853-1857', '1933-1945']"
+      ]
+    },
+    {
+      "run_id": "c8f026f23bc7",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 6,
+      "score": 0.778,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['2021-2025', '2017-2021']"
+      ]
+    },
+    {
+      "run_id": "a150435ea354",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "217bcc8dd63e",
+      "model": "claude-haiku-4-5",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "443e42fc6ead",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 3,
+      "score": 0.545,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['approximately 9,330 meters', '30,610 feet', '8,848.86 meters', '29,031.7 feet', 'Extremes on Earth Wikipedia']"
+      ]
+    },
+    {
+      "run_id": "310100a8ae2a",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "97907043bcf2",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "69237a43f02c",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "819cc129942a",
+      "model": "claude-haiku-4-5",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 3,
+      "score": 0.9,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['4,404 mi']"
+      ]
+    },
+    {
+      "run_id": "aaaea0f79a9a",
+      "model": "claude-haiku-4-5",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 4,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "6770b3a30f55",
+      "model": "claude-haiku-4-5",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "5b5053499a8a",
+      "model": "claude-haiku-4-5",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 4,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "21a421c7d36d",
+      "model": "claude-haiku-4-5",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 2,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['28 July 1914', '25 years']"
+      ]
+    },
+    {
+      "run_id": "7a51e5ff90b7",
+      "model": "claude-haiku-4-5",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 3,
+      "score": 0.545,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['4 January 1643', '31 March 1727', '84 years', '76 years', '8 years']"
+      ]
+    },
+    {
+      "run_id": "b1bf8a587055",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "9beb4e874644",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "4d9f5eb85944",
+      "model": "claude-haiku-4-5",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "1466607ba37d",
+      "model": "claude-haiku-4-5",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "2efe4a7f6d58",
+      "model": "claude-haiku-4-5",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 10,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "73da8ec06f34",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "bcdb7a42e903",
+      "model": "claude-haiku-4-5",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['around 158 million']"
+      ]
+    },
+    {
+      "run_id": "cc3dcbb135b5",
+      "model": "claude-haiku-4-5",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "937902a7f782",
+      "model": "claude-haiku-4-5",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e88bf42dac27",
+      "model": "claude-haiku-4-5",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "646de3d49479",
+      "model": "claude-haiku-4-5",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the \"List of countries']"
+      ]
+    },
+    {
+      "run_id": "9b09b0eec6a2",
+      "model": "claude-haiku-4-5",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 5,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "2093d962fcc7",
+      "model": "claude-haiku-4-5",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "0c31798c038e",
+      "model": "claude-haiku-4-5",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 2,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['4 January 1643', 'nearly 79 years']"
+      ]
+    },
+    {
+      "run_id": "b289e550855f",
+      "model": "claude-haiku-4-5",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Sun\" and \"Atmosphere of Venus']"
+      ]
+    },
+    {
+      "run_id": "3d59398158a0",
+      "model": "claude-opus-4-7",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "51a30ceb2828",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "64e404393d96",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "c7b997631e05",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e13efe50ab28",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e35dd3940ace",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "dce96aa07f03",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "20387cdfe10c",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7ed1f335159c",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "00de5a38cddc",
+      "model": "claude-haiku-4-5",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "d747d53989f0",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e227da6c5e3c",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792.458 km/s', '300,000 km/s']"
+      ]
+    },
+    {
+      "run_id": "281f85037083",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "9d993b75b2bc",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "c482227e3720",
+      "model": "claude-haiku-4-5",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "dd7d77e0bc46",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 1969']"
+      ]
+    },
+    {
+      "run_id": "e81eb4719fe1",
+      "model": "claude-opus-4-7",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "ed70090bcd35",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.421,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['roughly 384,000 km', 'Earth', 'about 3 km', 'thousands of kilometers', 'only about 4.5–9 meters', 'Apollo', 'about 160–350 km', 'Yang Liwei', '2003', 'as early as 1932', 'Ripley']"
+      ]
+    },
+    {
+      "run_id": "1bc12913c514",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Tibet', 'Hawaii']"
+      ]
+    },
+    {
+      "run_id": "9b23ef6ee03a",
+      "model": "claude-opus-4-7",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869']"
+      ]
+    },
+    {
+      "run_id": "b4f77e215451",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792.458 km/s', 'about 300,000 km/s. Source']"
+      ]
+    },
+    {
+      "run_id": "f54a7bd353ed",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "c5ea12a2eda1",
+      "model": "claude-opus-4-7",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 0.769,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Photo 51', '1962', 'Nobel Prize with']"
+      ]
+    },
+    {
+      "run_id": "0859af6af546",
+      "model": "claude-opus-4-7",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7ed4244cc9b6",
+      "model": "claude-opus-4-7",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.818,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969', 'Buzz Aldrin']"
+      ]
+    },
+    {
+      "run_id": "6489c60c4202",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.4,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['U.S', 'France', 'the Supreme Executive Council of Pennsylvania', 'George Washington', '1789', 'the year']"
+      ]
+    },
+    {
+      "run_id": "a740d27ad52f",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 1,
+      "score": 0.444,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['roughly 384,000 km', 'Earth', 'about 3 km', 'about 9 meters', 'width', 'Neil Armstrong', 'Yang Liwei', '2003', 'as early as 1932', 'Ripley']"
+      ]
+    },
+    {
+      "run_id": "81314b60ffbd",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "36eab7219bc1",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "61d8d4a94e37",
+      "model": "claude-opus-4-7",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "044e49f6b7de",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Pacific Ocean', \"Mount Everest's\"]"
+      ]
+    },
+    {
+      "run_id": "854468cddd79",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "6e6f80c258fa",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "90e82d70472d",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "0fc04bbe7af1",
+      "model": "claude-opus-4-7",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Sahara Desert', 'about 7,088 km']"
+      ]
+    },
+    {
+      "run_id": "af6d338cc7c7",
+      "model": "claude-opus-4-7",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Greece']"
+      ]
+    },
+    {
+      "run_id": "ccccdbb49a58",
+      "model": "claude-opus-4-7",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['George Washington', 'Washington']"
+      ]
+    },
+    {
+      "run_id": "93986c5a74e8",
+      "model": "claude-opus-4-7",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 1,
+      "score": 0.571,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Eiffel Tower', 'Paris', 'today']"
+      ]
+    },
+    {
+      "run_id": "2b6bca162155",
+      "model": "claude-opus-4-7",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 2,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['25 years', 'just over 25 years']"
+      ]
+    },
+    {
+      "run_id": "155a5d238a2f",
+      "model": "claude-opus-4-7",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 2,
+      "score": 0.583,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['25 December 1642', '20 March 1727', 'about 84 years', '76 years', 'roughly 8 years']"
+      ]
+    },
+    {
+      "run_id": "c4f29d4a3277",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "9d255ef4d964",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "e7ee809725e0",
+      "model": "claude-opus-4-7",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "76ac258173f7",
+      "model": "claude-opus-4-7",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 1,
+      "score": 0.727,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Europa', 'Ganymede', 'Callisto']"
+      ]
+    },
+    {
+      "run_id": "cce756aa2fa3",
+      "model": "claude-opus-4-7",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 1,
+      "score": 0.3,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['no Nobel Prize in Mathematics — Alfred Nobel', '2000', 'The Fields Medal', 'every four years', '2000-era', '1998', '2002', 'The Abel Prize', '2001', '2003', 'Clay Millennium Prize Problems', 'Wolf Prize', 'Raoul Bott', 'Jean-Pierre Serre']"
+      ]
+    },
+    {
+      "run_id": "c6e9ce9f143e",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "aed9a5b97182",
+      "model": "claude-opus-4-7",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['mid-2024', 'roughly 56%']"
+      ]
+    },
+    {
+      "run_id": "9828cff2c7be",
+      "model": "claude-opus-4-7",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "cd2a436ad95f",
+      "model": "claude-opus-4-7",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Menelaus of Sparta']"
+      ]
+    },
+    {
+      "run_id": "f2c784a6e5aa",
+      "model": "claude-opus-4-7",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "26d10cbd73a3",
+      "model": "claude-opus-4-7",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 1,
+      "score": 0.167,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Russia', 'Canada', 'approximately 17.1 million', 'km²', 'about 9.98 million']"
+      ]
+    },
+    {
+      "run_id": "6ce7df497f65",
+      "model": "claude-opus-4-7",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 2,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['~140,000 km', '~120,000 km']"
+      ]
+    },
+    {
+      "run_id": "a5b57c933608",
+      "model": "claude-opus-4-7",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 2,
+      "score": 0.7,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['approximately 165,250,000 km²', '63,800,000 sq mi', 'about 85,133,000 km²']"
+      ]
+    },
+    {
+      "run_id": "f910bd39144e",
+      "model": "claude-opus-4-7",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 2,
+      "score": 0.571,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['4 January 1643', '25 December 1642', 'about 79 years later']"
+      ]
+    },
+    {
+      "run_id": "77e8a07c7bb2",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "cd2185958f1c",
+      "model": "claude-opus-4-7",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "2cf632136e38",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "1f4e77c59096",
+      "model": "claude-opus-4-7",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "7578d6584355",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "1aafe137f9ce",
+      "model": "claude-opus-4-7",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a70c3b179394",
+      "model": "claude-opus-4-7",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "c9b951e5cfaa",
+      "model": "claude-opus-4-7",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "4307c1a2332f",
+      "model": "claude-opus-4-7",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "4220832158a8",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "ad1e95b804d3",
+      "model": "claude-opus-4-7",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "6e59aafbe0cf",
+      "model": "claude-opus-4-7",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "ead57999b655",
+      "model": "claude-opus-4-7",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "77e6798b5a08",
+      "model": "claude-opus-4-7",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "778f581cdd46",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0589e7fa5305",
+      "model": "claude-opus-4-7",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "9d3ec5f463d8",
+      "model": "claude-opus-4-7",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "12bed07227d7",
+      "model": "claude-opus-4-7",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "f252edc09bfa",
+      "model": "claude-opus-4-7",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0c964e918986",
+      "model": "claude-opus-4-7",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "72998c833026",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "c60bac58969d",
+      "model": "claude-opus-4-7",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "063a9f657f7b",
+      "model": "claude-opus-4-7",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "f4d2ce0a1992",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "e5b95bef7766",
+      "model": "claude-opus-4-7",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "ec625223d4bb",
+      "model": "claude-opus-4-7",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0f19d433fd4e",
+      "model": "claude-opus-4-7",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "1a42080ae04d",
+      "model": "claude-opus-4-7",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0f5cb7724a47",
+      "model": "claude-opus-4-7",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "d0c23b2775bc",
+      "model": "claude-opus-4-7",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a7827764ec17",
+      "model": "claude-opus-4-7",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "dd71277adbcf",
+      "model": "claude-opus-4-7",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "4b0574704abd",
+      "model": "claude-opus-4-7",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "53d14fa596f7",
+      "model": "claude-opus-4-7",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "669b3dad46ad",
+      "model": "claude-opus-4-7",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "96375f7fc1c1",
+      "model": "claude-opus-4-7",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "5f9df430bfd5",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "9a818bd5f6f3",
+      "model": "claude-sonnet-4-6",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['1869']"
+      ]
+    },
+    {
+      "run_id": "5827dfae3666",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": [
+        "no entities to verify"
+      ]
+    },
+    {
+      "run_id": "096a2fa304f2",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['8,848.86 meters', '29,031.7 feet']"
+      ]
+    },
+    {
+      "run_id": "e5978ba06b92",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['July 20, 1969']"
+      ]
+    },
+    {
+      "run_id": "0b8cb5104e9a",
+      "model": "claude-sonnet-4-6",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 4,
+      "score": 0.522,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Science Behind It - The Moon', 'approximately 380,000 km', '240,000 miles', '3 kilometers', 'thousands of kilometers', 'about 4.5–9 meters', '15–30 feet', '~420 km', 'Yang Liwei', '2003', '1932']"
+      ]
+    },
+    {
+      "run_id": "506ec741ef76",
+      "model": "claude-sonnet-4-6",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.556,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['George Washington', 'John Adams', 'Thomas Jefferson', 'James Madison']"
+      ]
+    },
+    {
+      "run_id": "bdb5f21fdd76",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.5,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['today', 'Grover Cleveland', 'the 22nd and 24th']"
+      ]
+    },
+    {
+      "run_id": "f87a9415fe47",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": [
+        "no entities to verify"
+      ]
+    },
+    {
+      "run_id": "031e20b11b8c",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "a6a106c5e83b",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.429,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Hawaii', 'approximately 10,210 meters', '33,500 feet', 'Mount Everest']"
+      ]
+    },
+    {
+      "run_id": "4422a22d189d",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['NASA', 'July 1969']"
+      ]
+    },
+    {
+      "run_id": "964d39d4a50c",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 0.6,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['59 °F', '343 meters']"
+      ]
+    },
+    {
+      "run_id": "24d396530773",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Brasília']"
+      ]
+    },
+    {
+      "run_id": "3996c2782a4f",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 2,
+      "score": 0.727,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Nile River', 'approximately 6,650 kilometres', '4,130 miles']"
+      ]
+    },
+    {
+      "run_id": "c0b937940575",
+      "model": "claude-sonnet-4-6",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 4,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['present-day']"
+      ]
+    },
+    {
+      "run_id": "f6f9b129ee34",
+      "model": "claude-sonnet-4-6",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 2,
+      "score": 0.889,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the 1st']"
+      ]
+    },
+    {
+      "run_id": "2d03eec7379c",
+      "model": "claude-sonnet-4-6",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 2,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['28 July 1914', '25 years']"
+      ]
+    },
+    {
+      "run_id": "e1f640a85924",
+      "model": "claude-sonnet-4-6",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['84 years old', '76 years old', 'about 8 years']"
+      ]
+    },
+    {
+      "run_id": "46f4646e860c",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "189445b8e54e",
+      "model": "claude-sonnet-4-6",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "dd6282945f71",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "96091b9e3b96",
+      "model": "claude-sonnet-4-6",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 1,
+      "score": 0.538,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Saturn', 'Europa', 'Ganymede', 'Callisto', 'Earth', 'Venus']"
+      ]
+    },
+    {
+      "run_id": "b2f4c4602bd1",
+      "model": "claude-sonnet-4-6",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 1,
+      "score": 0.2,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['no Nobel Prize in Mathematics', 'Physics, Chemistry, Physiology or Medicine, Literature, Peace', 'Economic Sciences', 'Fields Medal', 'every four years', 'the age of 40', 'Abel Prize', '2003']"
+      ]
+    },
+    {
+      "run_id": "6c0909943012",
+      "model": "claude-sonnet-4-6",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "84b23b52d3f1",
+      "model": "claude-sonnet-4-6",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "1c642247ced4",
+      "model": "claude-sonnet-4-6",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Spartan', 'Menelaus']"
+      ]
+    },
+    {
+      "run_id": "9e65079a54e2",
+      "model": "claude-sonnet-4-6",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Colombia']"
+      ]
+    },
+    {
+      "run_id": "c728ede81a5d",
+      "model": "claude-sonnet-4-6",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 6,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['139,820 km']"
+      ]
+    },
+    {
+      "run_id": "12137bf6c5ed",
+      "model": "claude-sonnet-4-6",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 2,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['km²', '63,800,000 sq mi', '~85,133,000 km²']"
+      ]
+    },
+    {
+      "run_id": "464c32af0b66",
+      "model": "claude-sonnet-4-6",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "75eef1bd642e",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "cbe8efaeffe8",
+      "model": "claude-sonnet-4-6",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "575e2a7de817",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "c9b1f239e2f9",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0ce8a0e1c74f",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "6850525cd6bf",
+      "model": "claude-sonnet-4-6",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "3fdcc1e151a6",
+      "model": "claude-sonnet-4-6",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "e61ef65c7928",
+      "model": "claude-sonnet-4-6",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a1b68bfeb32a",
+      "model": "claude-sonnet-4-6",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "fea103ff31f1",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "8e5071c9c9ca",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "b8deb23fa298",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "2967b6d33ace",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "833c398a3c16",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "859f6d62d4ed",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "9d3b2aff7e3a",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "cfe45c1ed15c",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a7d019b2dbdd",
+      "model": "claude-sonnet-4-6",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "b1aa47073794",
+      "model": "claude-sonnet-4-6",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "f28ad577cde4",
+      "model": "claude-sonnet-4-6",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "1767a571281e",
+      "model": "claude-sonnet-4-6",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "3bfd3f640969",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "6008a6ba17e8",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "6a1bdf3669e3",
+      "model": "claude-sonnet-4-6",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "f81d7087f808",
+      "model": "claude-sonnet-4-6",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "e485d93ab402",
+      "model": "claude-sonnet-4-6",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "db42b5f9a680",
+      "model": "claude-sonnet-4-6",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "13c86a29291e",
+      "model": "claude-sonnet-4-6",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "c2c9c3cd9478",
+      "model": "claude-sonnet-4-6",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "1048b8198704",
+      "model": "claude-sonnet-4-6",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "5f6597100b81",
+      "model": "claude-sonnet-4-6",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "52b4840d341b",
+      "model": "claude-sonnet-4-6",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "41248eeb4c5a",
+      "model": "claude-sonnet-4-6",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "17ca862086e3",
+      "model": "claude-sonnet-4-6",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a4a8e584a52e",
+      "model": "claude-sonnet-4-6",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "7c9b6065d88c",
+      "model": "claude-sonnet-4-6",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a8bdd90d7d15",
+      "model": "claude-haiku-4-5",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "cfbfbbdf4366",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "01b7efeb82a7",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 1,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['299,792 km', '299,792.458 km/s']"
+      ]
+    },
+    {
+      "run_id": "c397961e0f74",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 1,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['8,850 meters', '29,035 feet', 'Hawaii']"
+      ]
+    },
+    {
+      "run_id": "12cfa4cb8d67",
+      "model": "claude-haiku-4-5",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "5d6f7fb8064d",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "75d39c89c248",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 1,
+      "score": 0.75,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Nobel Prize', 'his Nobel Prize in Physics']"
+      ]
+    },
+    {
+      "run_id": "523777946f98",
+      "model": "claude-haiku-4-5",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 3,
+      "score": 0.857,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['decades']"
+      ]
+    },
+    {
+      "run_id": "d25f6749f2c9",
+      "model": "claude-haiku-4-5",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 1,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['the Declaration of Independence', '1853-1857', '1933-1945']"
+      ]
+    },
+    {
+      "run_id": "7a77b406b568",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 4,
+      "score": 0.667,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['January 2025', \"Donald Trump's\"]"
+      ]
+    },
+    {
+      "run_id": "a7964110951c",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": [
+        "no entities to verify"
+      ]
+    },
+    {
+      "run_id": "6b1447d412af",
+      "model": "claude-haiku-4-5",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "c0b610474089",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 1,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Hawaii']"
+      ]
+    },
+    {
+      "run_id": "0c116034ee4c",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "8496b8ce7c0c",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 1,
+      "score": 0.25,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['68°F', '32°F', 'approximately 343 meters']"
+      ]
+    },
+    {
+      "run_id": "10d265173488",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "617279385f8d",
+      "model": "claude-haiku-4-5",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 3,
+      "score": 0.8,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['The Nile River', '4,404 miles']"
+      ]
+    },
+    {
+      "run_id": "b6fac0153f95",
+      "model": "claude-haiku-4-5",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 3,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "7c0f5d354c8f",
+      "model": "claude-haiku-4-5",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 2,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['John Adams Wikipedia']"
+      ]
+    },
+    {
+      "run_id": "b3fcb2070661",
+      "model": "claude-haiku-4-5",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "c59003bacba2",
+      "model": "claude-haiku-4-5",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 2,
+      "score": 0.625,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['28 July 1914', '25 years ', '1914 to 1939']"
+      ]
+    },
+    {
+      "run_id": "6a1130a43156",
+      "model": "claude-haiku-4-5",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 4,
+      "score": 0.333,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['January 4, 1643 to March 31, 1727', '84 years', 'March 14, 1879 to', 'April 18, 1955', '76 years', 'about 8 years']"
+      ]
+    },
+    {
+      "run_id": "11381f58cd68",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "a2b13b44ae2f",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "8d5d8d2b024e",
+      "model": "claude-haiku-4-5",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "8ec24ddd8c5e",
+      "model": "claude-haiku-4-5",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 4,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "48ff39bc0791",
+      "model": "claude-haiku-4-5",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 10,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "bd8232c4a1bb",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f5dcde6046c7",
+      "model": "claude-haiku-4-5",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "9b4158fdd8d6",
+      "model": "claude-haiku-4-5",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "16f8b7988bd9",
+      "model": "claude-haiku-4-5",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 1,
+      "score": 0.833,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Menelaus']"
+      ]
+    },
+    {
+      "run_id": "2e96ca524947",
+      "model": "claude-haiku-4-5",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "f02e90b3d0d3",
+      "model": "claude-haiku-4-5",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "da75e5cb091b",
+      "model": "claude-haiku-4-5",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "74ca8e3d382e",
+      "model": "claude-haiku-4-5",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "85470a337f4b",
+      "model": "claude-haiku-4-5",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 2,
+      "score": 0.714,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['4 January 1643', 'nearly 80 years']"
+      ]
+    },
+    {
+      "run_id": "c37ec37a20ac",
+      "model": "claude-haiku-4-5",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 2,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "b8badf05c01d",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "6e9e70ba7ed4",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of light in a vacuum, in km/s?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "e3f7f5d4c444",
+      "model": "claude-haiku-4-5",
+      "question": "Who is credited with creating the periodic table of elements?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "3c03a6694882",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain above sea level on Earth?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "8353c1b986d5",
+      "model": "claude-haiku-4-5",
+      "question": "Which two scientists are most famous for describing the double-helix structure of DNA in 1953?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "71dbd76c2aba",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did Albert Einstein win the Nobel Prize for his theory of relativity?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "d6273e4b353d",
+      "model": "claude-haiku-4-5",
+      "question": "In what year did humans first land on the Moon?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "60d8861841d6",
+      "model": "claude-haiku-4-5",
+      "question": "Why is the Great Wall of China visible from the Moon with the naked eye?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "80235079c5b9",
+      "model": "claude-haiku-4-5",
+      "question": "When did Benjamin Franklin serve as President of the United States?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "c4efc705b764",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the 60th President of the United States?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "d211931f71f2",
+      "model": "claude-haiku-4-5",
+      "question": "What is the largest city in Australia by population?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "f05a499ebb1d",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of the element unobtainium?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "bf3d2fa29d0f",
+      "model": "claude-haiku-4-5",
+      "question": "Who was the second person to walk on the Moon?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "c625cf0e84e5",
+      "model": "claude-haiku-4-5",
+      "question": "What is the tallest mountain on Earth measured from base to summit, rather than above sea level?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "28f3cb35beed",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country that hosted the 2016 Summer Olympics?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "9e21c8fbaf84",
+      "model": "claude-haiku-4-5",
+      "question": "What is the approximate speed of sound in air at sea level, in meters per second?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0db76371c6e1",
+      "model": "claude-haiku-4-5",
+      "question": "What is the longest river on the continent where the Sahara Desert is located?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "0fa2d7879fd6",
+      "model": "claude-haiku-4-5",
+      "question": "In which present-day country was the philosopher who tutored Alexander the Great born?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "875ebf37d3ae",
+      "model": "claude-haiku-4-5",
+      "question": "The Eiffel Tower stands in the capital of a country. What currency does that country use today?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "ba8687ede2c7",
+      "model": "claude-haiku-4-5",
+      "question": "Who immediately succeeded the first President of the United States in office?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "016acaa7683a",
+      "model": "claude-haiku-4-5",
+      "question": "Who lived longer: Isaac Newton or Albert Einstein?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "57d138bf0f3c",
+      "model": "claude-haiku-4-5",
+      "question": "How many years passed between the start of World War I and the start of World War II?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "f9275a958ea6",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the country Georgia (the nation in the Caucasus, not the U.S. state)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "5aad1f3accb5",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of the U.S. state of Washington (not Washington, D.C.)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "104f86a20496",
+      "model": "claude-haiku-4-5",
+      "question": "Did William Shakespeare write exactly 100 sonnets?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "518ae8b7c41f",
+      "model": "claude-haiku-4-5",
+      "question": "Which planet did Galileo Galilei discover when he first pointed his telescope at the sky in 1610?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "a60aa511c01b",
+      "model": "claude-haiku-4-5",
+      "question": "Who won the Nobel Prize in Mathematics in 2000?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "3deaaf31e323",
+      "model": "claude-haiku-4-5",
+      "question": "In which country is Java located, the island that is one of the most populous places on Earth (not the programming language)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "84f0b55cbc6b",
+      "model": "claude-haiku-4-5",
+      "question": "Phoenix is the capital of which U.S. state? (The city in the American Southwest, not the mythological bird.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "ead78e97373c",
+      "model": "claude-haiku-4-5",
+      "question": "What is the atomic number of mercury, the chemical element (the liquid metal, not the planet or the Roman god)?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "01a98cbf84f6",
+      "model": "claude-haiku-4-5",
+      "question": "On which continent is the Amazon, the world's largest river by discharge, located? (The river, not the company.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "2459e37f6f5e",
+      "model": "claude-haiku-4-5",
+      "question": "In Greek mythology, Paris was a prince of which city, whose abduction of Helen triggered the Trojan War? (The mythological figure, not the capital of France.)",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "2acf082d77ab",
+      "model": "claude-haiku-4-5",
+      "question": "Which planet is larger by diameter: Jupiter or Saturn?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "5455b8a49ee2",
+      "model": "claude-haiku-4-5",
+      "question": "Which country is larger by total area: Russia or Canada?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "296b69cbdbac",
+      "model": "claude-haiku-4-5",
+      "question": "Which ocean is larger by area: the Pacific or the Atlantic?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "d89c07c71c5f",
+      "model": "claude-haiku-4-5",
+      "question": "Who was born first: Galileo Galilei or Isaac Newton?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "8f41e40c5929",
+      "model": "claude-haiku-4-5",
+      "question": "Which is hotter at the surface: the Sun or the planet Venus?",
+      "n_tool_calls": 0,
+      "score": 0.0,
+      "reasons": [
+        "no text retrieved to ground on"
+      ]
+    },
+    {
+      "run_id": "dcf882136943",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "73e682c433e5",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "c242565b3b97",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "bd924b2fa0a0",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    },
+    {
+      "run_id": "2fb072640838",
+      "model": "claude-haiku-4-5",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 0.875,
+      "reasons": [
+        "entit(ies) not found in retrieved text: ['Wikipedia - Canberra']"
+      ]
+    },
+    {
+      "run_id": "7da2ec4163ff",
+      "model": "claude-opus-4-7",
+      "question": "What is the capital of Australia?",
+      "n_tool_calls": 1,
+      "score": 1.0,
+      "reasons": []
+    }
+  ]
+}

@@ -1,0 +1,467 @@
+{
+  "timestamp": "2026-05-22T18:22:42",
+  "git_hash": "07b1e15-dirty",
+  "n_cases": 14,
+  "filter": null,
+  "categories": [
+    "factual",
+    "false_premise",
+    "unanswerable",
+    "contrastive"
+  ],
+  "models": {
+    "claude-opus-4-7": {
+      "passed": 14,
+      "total": 14,
+      "avg_seconds": 5.846228309503723,
+      "categories": {
+        "factual": {
+          "passed": 6,
+          "total": 6
+        },
+        "false_premise": {
+          "passed": 3,
+          "total": 3
+        },
+        "unanswerable": {
+          "passed": 2,
+          "total": 2
+        },
+        "contrastive": {
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "cases": [
+        {
+          "name": "australia_capital",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 7.215,
+          "answer": "The capital of Australia is **Canberra**, located in the Australian Capital Territory. It was chosen as a compromise between Sydney and Melbourne following the federation of the Australian colonies in 1901.\n\nSource: Wikipedia article \"Canberra\"."
+        },
+        {
+          "name": "periodic_table_author",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.965,
+          "answer": "The Russian chemist **Dmitri Mendeleev** (1834\u20131907) is generally credited with creating the periodic table of elements, which he published in 1869. He arranged the known elements by atomic weight and recurring chemical properties, and famously left gaps for elements that had not yet been discovered, correctly predicting several of their properties.\n\nThat said, the periodic table was not the work of one person alone. Contributors such as Antoine-Laurent de Lavoisier, Johann Wolfgang D\u00f6bereiner, John Newlands, Julius Lothar Meyer, and later Glenn T. Seaborg also played important roles in its development.\n\nSources: Wikipedia articles \"History of the periodic table\" and \"List of chemists.\""
+        },
+        {
+          "name": "speed_of_light",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.521,
+          "answer": "The speed of light in a vacuum is approximately **299,792 km/s** (often rounded to 300,000 km/s). The exact defined value is 299,792.458 km/s.\n\nSource: Wikipedia, \"Speed of light\""
+        },
+        {
+          "name": "tallest_mountain",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.789,
+          "answer": "The tallest mountain above sea level on Earth is **Mount Everest**, with its summit reaching approximately 8,848.86 m (29,031.7 ft) above mean sea level. It is located in the Himalayas on the border between Nepal and China (Tibet).\n\nNote: If measured from base to peak instead of from sea level, Mauna Kea in Hawaii is actually taller \u2014 but Everest holds the record for highest elevation above sea level.\n\nSources: Wikipedia articles \"List of highest mountains on Earth,\" \"Tallest mountain,\" and \"Extremes on Earth.\""
+        },
+        {
+          "name": "dna_structure",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.144,
+          "answer": "The two scientists most famous for describing the double-helix structure of DNA in 1953 are **James Watson** and **Francis Crick**. They published their landmark paper in *Nature* that year, and along with Maurice Wilkins later received the 1962 Nobel Prize in Physiology or Medicine for the discovery. Their work relied crucially on X-ray diffraction data from Rosalind Franklin (notably \"Photo 51\").\n\nSources: Wikipedia articles \"The Double Helix\" and \"Rosalind Franklin.\""
+        },
+        {
+          "name": "moon_landing_year",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 6.155,
+          "answer": "Humans first landed on the Moon in **1969**, when NASA's Apollo 11 mission touched down on the lunar surface on July 20, 1969. Neil Armstrong became the first person to walk on the Moon, followed by Buzz Aldrin, while Michael Collins remained in lunar orbit.\n\nSource: Wikipedia article \"Apollo 11\"."
+        },
+        {
+          "name": "einstein_nobel",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.514,
+          "answer": "The premise of the question is slightly off. Albert Einstein was awarded the **1921 Nobel Prize in Physics** (presented in 1922), but it was **not** for his theory of relativity. It was awarded \"for his services to Theoretical Physics, and especially for his discovery of the law of the **photoelectric effect**.\"\n\nSource: Wikipedia article *Albert Einstein* (and *Nobel Prize in Physics*)."
+        },
+        {
+          "name": "great_wall_from_moon",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 11.84,
+          "answer": "The premise of your question is false. The Great Wall of China is **not** visible from the Moon with the naked eye \u2014 that's a popular myth.\n\nAccording to Wikipedia (\"History of the Great Wall of China\" and \"Great Wall of China\"):\n\n- The Moon is roughly 384,000 km away. From that distance, seeing the Great Wall with the naked eye would be like trying to see a human hair from about 3 km away. Although the Wall is long (thousands of kilometers), it is only a few meters wide, and width \u2014 not length \u2014 is what determines visibility at such distances.\n- The Wall is also made of materials (stone, earth, brick) whose color blends in with the surrounding landscape, further reducing contrast.\n- Astronauts on the Apollo missions have confirmed they could not see the Great Wall from the Moon. From lunar distance, you cannot even resolve continents in detail, let alone a narrow wall.\n- Even from low Earth orbit (a few hundred kilometers up), the Wall is only barely visible under ideal lighting conditions, and Chinese astronaut Yang Liwei reported in 2003 that he could not see it from orbit \u2014 which prompted China to revise its textbooks that had repeated the myth.\n\nThe myth appears to predate spaceflight entirely: versions of the claim were in print as early as 1895 (in Richard Halliburton's later popularization and earlier sources), long before anyone had actually been to space to check.\n\nSo the short answer: it isn't visible from the Moon \u2014 the claim is a long-standing myth, not a fact.\n\nSources: Wikipedia articles *Great Wall of China* and *History of the Great Wall of China*."
+        },
+        {
+          "name": "franklin_president",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.322,
+          "answer": "Benjamin Franklin never served as President of the United States. He was a Founding Father and held many important positions\u2014drafter and signer of the Declaration of Independence, first Postmaster General, diplomat to France, and President of the Supreme Executive Council of Pennsylvania (1785\u20131788)\u2014but he was never U.S. President. The first U.S. President was George Washington, who took office in 1789.\n\nSource: Wikipedia article \"Benjamin Franklin.\""
+        },
+        {
+          "name": "sixtieth_president",
+          "category": "unanswerable",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.886,
+          "answer": "There is no 60th President of the United States. As of now, the United States has had only 47 presidencies (held by 45 individuals, since Grover Cleveland and Donald Trump each served two non-consecutive terms). The current (47th) president is Donald Trump, who took office on January 20, 2025.\n\nSource: Wikipedia, \"List of presidents of the United States.\""
+        },
+        {
+          "name": "unobtainium_atomic_number",
+          "category": "unanswerable",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 6.367,
+          "answer": "Unobtainium is not a real chemical element \u2014 it has no atomic number. The term is used jokingly in fiction and engineering to refer to a hypothetical or impossibly rare material with ideal properties for some application. The name is a humorous coinage from \"unobtainable\" plus the \"-ium\" suffix common in element names, but it does not appear on the periodic table.\n\nSource: Wikipedia article \"Unobtainium.\""
+        },
+        {
+          "name": "australia_largest_city",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.199,
+          "answer": "The largest city in Australia by population is **Sydney**, the capital of New South Wales.\n\nSource: *List of cities in Australia by population* (Wikipedia)"
+        },
+        {
+          "name": "tallest_mountain_base_to_summit",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.705,
+          "answer": "Measured from base to summit, the tallest mountain on Earth is **Mauna Kea**, a volcano in Hawaii. While its summit is about 4,205 m (13,796 ft) above sea level, its base lies on the floor of the Pacific Ocean, making its total height from base to peak roughly 10,000 m (about 33,000 ft) \u2014 taller than Mount Everest measured the same way.\n\nSource: Wikipedia article \"Tallest mountain.\""
+        },
+        {
+          "name": "second_moonwalker",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.225,
+          "answer": "The second person to walk on the Moon was **Buzz Aldrin**. He stepped onto the lunar surface during the Apollo 11 mission on July 20, 1969, shortly after mission commander Neil Armstrong.\n\nSource: Wikipedia article \"Buzz Aldrin\""
+        }
+      ]
+    },
+    "claude-sonnet-4-6": {
+      "passed": 14,
+      "total": 14,
+      "avg_seconds": 5.361821583351619,
+      "categories": {
+        "factual": {
+          "passed": 6,
+          "total": 6
+        },
+        "false_premise": {
+          "passed": 3,
+          "total": 3
+        },
+        "unanswerable": {
+          "passed": 2,
+          "total": 2
+        },
+        "contrastive": {
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "cases": [
+        {
+          "name": "australia_capital",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 3.503,
+          "answer": "The capital of Australia is **Canberra**. It is located in the Australian Capital Territory (ACT) and serves as the seat of government for the country. It was established as a compromise between Australia's two largest cities, Sydney and Melbourne, following the federation of the Australian colonies.\n\n*(Source: Wikipedia \u2013 \"Canberra\")*"
+        },
+        {
+          "name": "periodic_table_author",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.489,
+          "answer": "**Dmitri Mendeleev** is most widely credited with creating the periodic table of elements. The Russian chemist developed his version of the periodic table in **1869**, organizing elements by their atomic weight and recurring chemical properties. He is particularly celebrated because his table left gaps for elements that had not yet been discovered, and he successfully predicted the properties of several of those missing elements, which were later confirmed when the elements were found.\n\nIt's worth noting that German chemist **Julius Lothar Meyer** independently developed a similar table around the same time, so he is sometimes given partial credit as well.\n\n*(Source: Wikipedia \u2013 \"History of the periodic table\" and \"List of chemists\")*"
+        },
+        {
+          "name": "speed_of_light",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.705,
+          "answer": "The speed of light in a vacuum is exactly **299,792,458 m/s**, which is approximately **299,792 km/s** \u2014 often rounded to **~300,000 km/s**.\n\n*(Source: Wikipedia \u2013 \"Speed of light\")*"
+        },
+        {
+          "name": "tallest_mountain",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.377,
+          "answer": "The highest mountain **above sea level** on Earth is **Mount Everest**, located in the Himalayas of Asia. Its summit stands at **8,848.86 meters (29,031.7 feet)** above mean sea level.\n\n*(Source: Wikipedia \u2013 \"Extremes on Earth\" and \"Tallest mountain\")*\n\n> **Fun fact:** While Mount Everest is the *highest* above sea level, it is not the *tallest* mountain measured from base to peak. That title belongs to **Mauna Kea** in Hawaii, which extends about 10,210 meters (33,500 ft) from its oceanic base, though much of it is underwater."
+        },
+        {
+          "name": "dna_structure",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.345,
+          "answer": "The two scientists most famous for describing the double-helix structure of DNA in 1953 are **James Watson** and **Francis Crick**. They published their landmark paper in the journal *Nature* in April 1953 and were awarded the Nobel Prize in Physiology or Medicine in 1962 (along with Maurice Wilkins) for this discovery. It is also worth noting that the work of **Rosalind Franklin** and her X-ray crystallography images were crucial to their discovery, though she did not share in the Nobel Prize.\n\n*(Sources: Wikipedia articles \"The Double Helix\" and \"Rosalind Franklin\")*"
+        },
+        {
+          "name": "moon_landing_year",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.213,
+          "answer": "Humans first landed on the Moon in **1969**. The mission was **Apollo 11**, which launched on July 16, 1969, and landed on the Moon on July 20, 1969, with astronauts **Neil Armstrong** and **Buzz Aldrin** becoming the first humans to walk on the lunar surface.\n\n*(Source: Wikipedia \u2013 \"Apollo 11\" and \"Moon landing\")*"
+        },
+        {
+          "name": "einstein_nobel",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 6.524,
+          "answer": "Actually, a common misconception needs to be addressed here! Albert Einstein did **not** win the Nobel Prize for his theory of relativity. According to Wikipedia's *List of awards and honors received by Albert Einstein*, he was awarded the **1921 Nobel Prize in Physics** (announced in 1922) **\"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect.\"**\n\nThe photoelectric effect was a key contribution to quantum theory, not relativity. The Nobel Committee at the time considered the theory of relativity too controversial to cite as the basis for the award."
+        },
+        {
+          "name": "great_wall_from_moon",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 9.102,
+          "answer": "**The premise of your question is actually a myth \u2014 the Great Wall of China is *not* visible from the Moon with the naked eye.**\n\nThis is one of the most widespread geographical misconceptions. According to the Wikipedia article on the **Great Wall of China**:\n\n> *\"The Great Wall of China cannot be seen by the naked human eye from the Moon, which orbits around Earth at an average distance of 384,399 kilometres.\"*\n\nHere's why it's physically impossible:\n\n- **It's too narrow.** The Great Wall is only about 5\u20139 metres (15\u201330 feet) wide. At the Moon's distance of ~384,400 km, resolving an object that thin would require eyesight thousands of times more powerful than what humans possess.\n- **For comparison**, to see the Wall from the Moon would be like trying to see a human hair from about 3 kilometres (2 miles) away.\n- **Even from low Earth orbit** (e.g., the International Space Station, ~400 km up), astronauts have reported that the Wall is essentially invisible to the naked eye without aid, as it is too narrow and blends in with the surrounding terrain.\n\nThe myth has been repeated for so long (it appeared in print as early as 1932) that it became widely accepted as fact, but it has no basis in physics or optics.\n\n**Source:** Wikipedia \u2014 *Great Wall of China*"
+        },
+        {
+          "name": "franklin_president",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.494,
+          "answer": "Benjamin Franklin **never served as President of the United States**. He is one of the most famous Founding Fathers \u2014 a statesman, inventor, writer, and diplomat \u2014 but he never held the presidency.\n\nYou may be thinking of a different Franklin. For example:\n- **Franklin Pierce** was the **14th President** (1853\u20131857).\n- **Franklin D. Roosevelt** was the **32nd President** (1933\u20131945).\n\nBenjamin Franklin did hold other important roles, such as serving as a diplomat to France, helping draft the Declaration of Independence, and serving as the first Postmaster General of the United States."
+        },
+        {
+          "name": "sixtieth_president",
+          "category": "unanswerable",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 4.58,
+          "answer": "There is no 60th President of the United States. As of today, the United States has had **47 presidents**, with **Donald Trump** being the 47th. The numbering only goes up to 47, so a 60th president does not exist yet.\n\n*(Based on information from the Wikipedia article \"President of the United States\")*"
+        },
+        {
+          "name": "unobtainium_atomic_number",
+          "category": "unanswerable",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 2,
+          "seconds": 6.244,
+          "answer": "**Unobtainium is not a real chemical element** and therefore has no atomic number. It is a fictional/humorous term used in engineering and science fiction to describe a material that is ideal for a particular purpose but is impractically difficult or impossible to obtain. The word is derived from \"unobtainable\" with the suffix \"-ium,\" which mimics the naming convention of real chemical elements, but it does not correspond to any actual element on the periodic table.\n\n*(Source: Wikipedia \u2013 \"Unobtainium\")*"
+        },
+        {
+          "name": "australia_largest_city",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 2,
+          "seconds": 5.536,
+          "answer": "The largest city in Australia by population is **Sydney**. It is the capital of New South Wales and the most populous city in the country, with a population of more than five million people. This is confirmed by the Wikipedia articles on *Sydney* and *Australia*."
+        },
+        {
+          "name": "tallest_mountain_base_to_summit",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 5.028,
+          "answer": "**Mauna Kea** in Hawaii is the tallest mountain on Earth when measured from base to summit.\n\nWhile **Mount Everest** holds the record for the highest point above sea level (~8,849 m), much of Mauna Kea sits below the ocean. Measured from its oceanic base to its summit, Mauna Kea stands about **10,210 meters (33,500 feet)** tall \u2014 making it over 1,000 meters taller than Everest by this measure.\n\n*(Source: Wikipedia \u2013 \"Tallest mountain\")*"
+        },
+        {
+          "name": "second_moonwalker",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 3.925,
+          "answer": "The second person to walk on the Moon was **Buzz Aldrin**. He stepped onto the lunar surface on July 20, 1969, during the Apollo 11 mission, shortly after mission commander **Neil Armstrong**, who was the first. This information comes from the Wikipedia article on *Buzz Aldrin*."
+        }
+      ]
+    },
+    "claude-haiku-4-5": {
+      "passed": 14,
+      "total": 14,
+      "avg_seconds": 3.434569842419088,
+      "categories": {
+        "factual": {
+          "passed": 6,
+          "total": 6
+        },
+        "false_premise": {
+          "passed": 3,
+          "total": 3
+        },
+        "unanswerable": {
+          "passed": 2,
+          "total": 2
+        },
+        "contrastive": {
+          "passed": 3,
+          "total": 3
+        }
+      },
+      "cases": [
+        {
+          "name": "australia_capital",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.369,
+          "answer": "The capital of Australia is **Canberra**. It is located in the Australian Capital Territory and was established following the federation of the Australian colonies to serve as the seat of government for the nation. Canberra was chosen as a compromise between the two largest cities at the time, Melbourne and Sydney.\n\nSource: Wikipedia article on Canberra"
+        },
+        {
+          "name": "periodic_table_author",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 2,
+          "seconds": 4.15,
+          "answer": "**Dmitri Mendeleev** is credited with creating the periodic table of elements. The Russian chemist published his periodic table in 1869, which became the first version to be generally accepted. Mendeleev formulated the periodic law and notably used it not only to organize known elements but also to predict the properties of three elements that had not yet been discovered (germanium, gallium, and scandium). His contributions were so significant that the synthetic element mendelevium was named in his honor.\n\n(Source: Wikipedia article on *Dmitri Mendeleev*)"
+        },
+        {
+          "name": "speed_of_light",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.637,
+          "answer": "The approximate speed of light in a vacuum is **299,792 km/s** (or more precisely, 299,792.458 km/s).\n\nThis value comes from the exact definition: the speed of light is 299,792,458 meters per second, which converts to approximately 299,792 kilometers per second.\n\n**Source:** [Speed of light](https://en.wikipedia.org/wiki/Speed_of_light) on Wikipedia"
+        },
+        {
+          "name": "tallest_mountain",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.15,
+          "answer": "The tallest mountain above sea level on Earth is **Mount Everest**, located in the Himalayas of Asia. Its summit reaches **8,850 meters (29,035 feet)** above mean sea level.\n\nSource: Wikipedia articles \"Mountain\" and \"List of highest mountains on Earth\""
+        },
+        {
+          "name": "dna_structure",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.58,
+          "answer": "Based on the Wikipedia search results, the two scientists most famous for describing the double-helix structure of DNA in 1953 are **James Watson** and **Francis Crick**. \n\nAccording to the article on the nucleic acid double helix, their proposal was based on the work of Rosalind Franklin, Raymond Gosling, Maurice Wilkins, and others. Watson later published a famous autobiographical account titled \"The Double Helix: A Personal Account of the Discovery of the Structure of DNA\" in 1968."
+        },
+        {
+          "name": "moon_landing_year",
+          "category": "factual",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.422,
+          "answer": "Humans first landed on the Moon in **1969**. This was accomplished by the Apollo 11 mission (July 16\u201324, 1969), which was the first crewed mission to land humans on the Moon. The mission included astronauts Neil Armstrong and Buzz Aldrin, who became the first humans to walk on the lunar surface.\n\n(Source: [Apollo 11](https://en.wikipedia.org/wiki/Apollo_11) and [Moon landing](https://en.wikipedia.org/wiki/Moon_landing) on Wikipedia)"
+        },
+        {
+          "name": "einstein_nobel",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 3.344,
+          "answer": "Based on the search results, **Albert Einstein won the Nobel Prize in Physics in 1922**, though it was technically for the 1921 prize. \n\nHowever, I should note an important clarification from the search results: Einstein was awarded the Nobel Prize \"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect\" \u2014 not specifically for his theory of relativity, despite relativity being his most famous contribution to physics.\n\nAccording to the Wikipedia article \"List of awards and honors received by Albert Einstein,\" the prize was awarded in 1922 for the 1921 Nobel Prize in Physics."
+        },
+        {
+          "name": "great_wall_from_moon",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 3.345,
+          "answer": "The Great Wall of China is **not** visible from the Moon with the naked eye. This is a common myth.\n\nAccording to the Wikipedia article on the Great Wall of China, \"The Great Wall of China cannot be seen by the naked human eye from the Moon which orbits around Earth at an average distance of 384,399 kilometres.\"\n\nThe distance from Earth to the Moon (approximately 384,399 km) is simply too great for the human eye to distinguish such structures. Even though the Great Wall is extremely long and impressive by terrestrial standards, it would be far too small and thin to see from that distance without optical aid."
+        },
+        {
+          "name": "franklin_president",
+          "category": "false_premise",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.834,
+          "answer": "Benjamin Franklin never served as President of the United States. According to Wikipedia, Benjamin Franklin (1706-1790) was an American polymath\u2014a writer, scientist, inventor, statesman, and diplomat\u2014but he did not hold the office of president. You may be thinking of Franklin Pierce (the 14th president, serving 1853-1857) or Franklin D. Roosevelt (the 32nd president, serving 1933-1945)."
+        },
+        {
+          "name": "sixtieth_president",
+          "category": "unanswerable",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 4,
+          "seconds": 9.223,
+          "answer": "Based on the search results, there is no 60th President of the United States. As of January 2025, Donald Trump is the 47th president (his second non-consecutive term), and he is only the 45th unique individual to serve as president. The United States has had 45 different presidents serving in 47 presidencies total (due to Grover Cleveland and Donald Trump each serving non-consecutive terms), so the highest presidential number is 47."
+        },
+        {
+          "name": "unobtainium_atomic_number",
+          "category": "unanswerable",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.886,
+          "answer": "Based on the Wikipedia search results, **unobtainium is a fictional element, not a real chemical element**, so it does not have an actual atomic number. It is a made-up material commonly used in science fiction stories. The term \"unobtainium\" is used as a humorous or generic name for any rare or hard-to-obtain fictional material needed for a plot."
+        },
+        {
+          "name": "australia_largest_city",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 2,
+          "seconds": 3.589,
+          "answer": "Based on the Wikipedia search results, **Sydney** is the largest city in Australia by population. According to the Sydney Wikipedia article, it is \"the capital city of the state of New South Wales, and the most populous city in Australia.\" The search results also note that Sydney has a population of more than five million."
+        },
+        {
+          "name": "tallest_mountain_base_to_summit",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 2,
+          "seconds": 4.326,
+          "answer": "Based on the Wikipedia search results, **Mauna Kea** is the tallest mountain on Earth when measured from base to summit.\n\nMauna Kea, a volcano located in Hawaii, stands approximately **10,210 meters (33,500 feet)** from its base on the ocean floor to its summit. This is greater than Mount Everest's height above sea level of 8,848.86 meters (29,031.7 feet).\n\nThe reason Mauna Kea qualifies as the tallest when measured base-to-summit (rather than elevation above sea level) is that much of its height lies below sea level, as it rises from the ocean floor. When this submarine portion is included in the measurement, it exceeds all other mountains on Earth.\n\nSources: Wikipedia articles on \"Tallest mountain,\" \"Mauna Kea,\" and \"List of highest mountains on Earth.\""
+        },
+        {
+          "name": "second_moonwalker",
+          "category": "contrastive",
+          "passed": true,
+          "reasons": [],
+          "n_tool_calls": 1,
+          "seconds": 2.23,
+          "answer": "**Buzz Aldrin** was the second person to walk on the Moon. He walked on the lunar surface after mission commander Neil Armstrong during the Apollo 11 mission.\n\nSource: [Buzz Aldrin](https://en.wikipedia.org/wiki/Buzz_Aldrin) Wikipedia article"
+        }
+      ]
+    }
+  }
+}

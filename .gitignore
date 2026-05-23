@@ -1,0 +1,9 @@
+.venv/
+__pycache__/
+*.pyc
+traces/
+.DS_Store
+
+# Local secrets — keep the example, ignore the real file.
+.env
+!.env.example

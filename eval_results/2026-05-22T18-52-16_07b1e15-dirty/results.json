@@ -1,0 +1,3409 @@
+{
+  "timestamp": "2026-05-22T18:52:16",
+  "git_hash": "07b1e15-dirty",
+  "n_cases": 37,
+  "filter": null,
+  "grounding": "LLM judge (claude-sonnet-4-6)",
+  "threshold": 0.7,
+  "categories": [
+    "factual",
+    "false_premise",
+    "unanswerable",
+    "contrastive",
+    "multi_hop",
+    "computation",
+    "comparison",
+    "disambiguation"
+  ],
+  "dimensions": [
+    "answer",
+    "search",
+    "grounding",
+    "calibration"
+  ],
+  "models": {
+    "claude-opus-4-7": {
+      "passed": 37,
+      "total": 37,
+      "mean_score": 0.9263513513513513,
+      "avg_seconds": 5.275259213894921,
+      "dimensions": {
+        "answer": 1.0,
+        "search": 0.9324324324324325,
+        "grounding": 0.772972972972973,
+        "calibration": 1.0
+      },
+      "categories": {
+        "factual": {
+          "passed": 6,
+          "total": 6
+        },
+        "false_premise": {
+          "passed": 5,
+          "total": 5
+        },
+        "unanswerable": {
+          "passed": 3,
+          "total": 3
+        },
+        "contrastive": {
+          "passed": 4,
+          "total": 4
+        },
+        "multi_hop": {
+          "passed": 5,
+          "total": 5
+        },
+        "computation": {
+          "passed": 1,
+          "total": 1
+        },
+        "comparison": {
+          "passed": 6,
+          "total": 6
+        },
+        "disambiguation": {
+          "passed": 7,
+          "total": 7
+        }
+      },
+      "cases": [
+        {
+          "name": "australia_capital",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All key claims in the answer \u2014 Canberra as Australia's capital, its location in the Australian Capital Territory, and it being chosen as a compromise between Sydney and Melbourne \u2014 are directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.734,
+          "answer": "The capital of Australia is **Canberra**, located in the Australian Capital Territory. It was chosen as a compromise between the two largest cities, Sydney and Melbourne.\n\nSource: Wikipedia article \"Canberra\"."
+        },
+        {
+          "name": "periodic_table_author",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The retrieved text confirms Mendeleev's dates (1834\u20131907), his role as \"creator of the Periodic table of elements,\" and the contributions of Lavoisier, D\u00f6bereiner, Newlands, and Meyer, but does not support the specific claims about 1869, arranging by atomic weight, recurring chemical properties, or leaving gaps for undiscovered elements."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 6.139,
+          "answer": "**Dmitri Mendeleev** (1834\u20131907), a Russian chemist, is generally credited with creating the periodic table of elements, which he published in 1869. He arranged the known elements by atomic weight and recurring chemical properties, and famously left gaps to predict undiscovered elements.\n\nIt's worth noting that the periodic table evolved through contributions from several scientists, including Antoine-Laurent de Lavoisier, Johann Wolfgang D\u00f6bereiner, John Newlands, and Julius Lothar Meyer (who independently developed a similar table around the same time as Mendeleev).\n\nSources: Wikipedia articles \"History of the periodic table\" and \"List of chemists.\""
+        },
+        {
+          "name": "speed_of_light",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text confirms the speed of light is exactly 299,792,458 m/s, which directly supports the agent's claim of 299,792.458 km/s; the \"~300,000 km/s\" rounding is a straightforward unit conversion not explicitly stated in the text but derivable from it."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.089,
+          "answer": "The speed of light in a vacuum is approximately **299,792 km/s** (exactly 299,792.458 km/s), often rounded to about 300,000 km/s.\n\nSource: Wikipedia article \"Speed of light.\""
+        },
+        {
+          "name": "tallest_mountain",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.95,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.8,
+              "reasons": [
+                "The core claims \u2014 Mount Everest is the highest mountain above sea level at 8,848.86 m (29,031.7 ft), located in the Himalayas on the Nepal/Tibet border, and Mauna Kea holds the base-to-peak record \u2014 are supported by the retrieved text snippets, though the specific border detail (Nepal and Tibet Autonomous Region of China) is not explicitly stated in the retrieved excerpts."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.505,
+          "answer": "The tallest mountain above sea level on Earth is **Mount Everest**, with a summit standing roughly 8,848.86 m (29,031.7 ft) above mean sea level. It is located in the Himalayas on the border between Nepal and the Tibet Autonomous Region of China.\n\nNote: If measured from base to peak (rather than from sea level), Mauna Kea in Hawaii is actually taller \u2014 but Everest holds the record for highest elevation above sea level.\n\nSources: Wikipedia articles \"List of highest mountains on Earth,\" \"Tallest mountain,\" and \"Extremes on Earth.\""
+        },
+        {
+          "name": "dna_structure",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The retrieved text confirms James Watson, Francis Crick, and Maurice Wilkins as key figures in the DNA double helix discovery, but the specific claim about the 1962 Nobel Prize in Physiology or Medicine is not explicitly stated in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.977,
+          "answer": "The two scientists most famous for describing the double-helix structure of DNA in 1953 are **James Watson** and **Francis Crick**. Their work built crucially on X-ray diffraction data from Rosalind Franklin (and Maurice Wilkins), and Watson, Crick, and Wilkins shared the 1962 Nobel Prize in Physiology or Medicine for the discovery.\n\nSources: Wikipedia articles \"The Double Helix\" and \"Rosalind Franklin\"."
+        },
+        {
+          "name": "moon_landing_year",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text explicitly states that \"the first crewed mission to land on the Moon was Apollo 11 in 1969,\" and the Apollo 11 article confirms it was \"the American spaceflight that first landed humans on the Moon\" during July 16\u201324, 1969, directly supporting all claims in the answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.694,
+          "answer": "Humans first landed on the Moon in **1969**, when NASA's Apollo 11 mission touched down on July 20, 1969.\n\nSources: Wikipedia articles \"Moon landing\" and \"Apollo 11\"."
+        },
+        {
+          "name": "einstein_nobel",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.825,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.3,
+              "reasons": [
+                "The agent's key claims \u2014 that Einstein won the 1921 Nobel Prize in Physics for the photoelectric effect (not relativity), and that the committee avoided citing relativity as controversial \u2014 are not found in the retrieved text, which only contains general information about Nobel Prize controversies and brief mentions of Einstein without specifying his prize year or citation reason."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.993,
+          "answer": "The premise of the question is slightly off, so let me clarify:\n\nAlbert Einstein was awarded the **1921 Nobel Prize in Physics** (formally presented in 1922), but it was **not** for his theory of relativity. The prize was given \"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect.\" The Nobel Committee deliberately avoided citing relativity, as it was still considered controversial at the time.\n\nSource: Wikipedia article *Albert Einstein* (and *Nobel Prize in Physics controversies*)."
+        },
+        {
+          "name": "great_wall_from_moon",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.775,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.1,
+              "reasons": [
+                "The retrieved text contains no information about the Great Wall being visible (or not) from the Moon, no details about the Moon's distance, the Wall's width, Yang Liwei's experience, or the history of the myth \u2014 all the specific claims in the agent's answer are not supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 10.982,
+          "answer": "The premise of your question is incorrect. The Great Wall of China is **not** visible from the Moon with the naked eye \u2014 this is a popular myth.\n\nAccording to Wikipedia's article on the Great Wall of China:\n\n- The Moon is roughly 384,000 km (239,000 miles) from Earth. At that distance, seeing the Wall would require eyesight roughly 17,000 times sharper than normal 20/20 vision.\n- The Great Wall is at most about 9.1 m (30 ft) wide \u2014 comparable to a highway \u2014 and is roughly the same color as the surrounding soil, so it has very low contrast even when viewed from orbit.\n- Chinese astronaut Yang Liwei, who flew on Shenzhou 5 in 2003, confirmed he could not see the Great Wall from low Earth orbit, let alone from the Moon. Apollo astronauts have likewise stated that no individual human-made objects are visible from the Moon \u2014 only features like continents, oceans, and weather systems.\n- The myth predates spaceflight; it appeared in print as early as 1932 (in a *Ripley's Believe It or Not!* cartoon) and has been repeated so often that it became widely accepted despite being false.\n\nSo the short answer: it isn't visible from the Moon \u2014 that's a long-standing misconception, not a fact.\n\nSource: Wikipedia, \"Great Wall of China.\""
+        },
+        {
+          "name": "franklin_president",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.85,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.4,
+              "reasons": [
+                "The retrieved text confirms Franklin was a Founding Father who never served as U.S. President, but it does not mention his role as President of the Supreme Executive Council of Pennsylvania (1785\u20131788) or George Washington as the first President, so those specific claims are not grounded in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.167,
+          "answer": "Benjamin Franklin never served as President of the United States. He was a Founding Father and held many important positions, but he was never U.S. President. He did, however, serve as the 6th President of the Supreme Executive Council of Pennsylvania (essentially the governor of Pennsylvania) from 1785 to 1788.\n\nThe first President of the United States was George Washington, who took office in 1789 \u2014 Franklin died in 1790 without ever holding that office.\n\nSource: Wikipedia article \"Benjamin Franklin.\""
+        },
+        {
+          "name": "sixtieth_president",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The agent's key claims \u2014 that only 47 presidencies have existed, that 45 individuals have served, that Grover Cleveland and Donald Trump each served non-consecutive terms, and that Trump is the 47th president \u2014 are all directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.691,
+          "answer": "There is no 60th President of the United States. As of now, only 47 presidencies have existed (with 45 individuals having served, since Grover Cleveland and Donald Trump each served two non-consecutive terms). The current/most recent president is Donald Trump, counted as the 47th president.\n\nSource: \"List of presidents of the United States\" (Wikipedia)."
+        },
+        {
+          "name": "unobtainium_atomic_number",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The agent's answer is fully supported by the retrieved text, which confirms unobtainium is not a real element but a humorous term derived from \"unobtainable\" with the \"-ium\" suffix, used in fiction and engineering to describe an ideally suited but impossible-to-obtain material."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.299,
+          "answer": "Unobtainium is not a real chemical element, so it doesn't have an atomic number. It's a tongue-in-cheek term used in engineering and fiction to describe a hypothetical material that is ideal for some purpose but impossible (or extremely difficult) to obtain. The name is a humorous coinage from \"unobtainable\" plus the \"-ium\" suffix common in element names.\n\nSource: Wikipedia article \"Unobtainium\"."
+        },
+        {
+          "name": "australia_largest_city",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 0.775,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.1,
+              "reasons": [
+                "The retrieved text does not contain any specific ranking or mention of Sydney as the largest city in Australia; it only describes the structure of the list without providing actual city names or population figures."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.17,
+          "answer": "The largest city in Australia by population is **Sydney**, the capital of New South Wales.\n\nSource: *List of cities in Australia by population* (Wikipedia)"
+        },
+        {
+          "name": "tallest_mountain_base_to_summit",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 0.988,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.95,
+              "reasons": [
+                "All key claims in the answer \u2014 Mauna Kea being the tallest mountain from base to summit, its sea-level height of 4,207 m (13,803 ft), its total base-to-summit height of 9,330 m (30,610 ft), its classification as a dormant shield volcano in Hawaii, and the comparison to Everest \u2014 are directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.495,
+          "answer": "Measured from base to summit, the tallest mountain on Earth is **Mauna Kea**, a dormant shield volcano on the island of Hawai\u02bbi. While its peak rises only 4,207 m (13,803 ft) above sea level, its base lies on the floor of the Pacific Ocean, giving it a total height of about **9,330 m (30,610 ft)** from base to summit \u2014 taller than Mount Everest's 8,849 m above sea level.\n\nSources: Wikipedia articles \"Mauna Kea\" and \"Mountain.\""
+        },
+        {
+          "name": "second_moonwalker",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both the Buzz Aldrin and Buzz Lightyear Wikipedia excerpts directly state that Buzz Aldrin was \"the second person to walk on the Moon after mission commander Neil Armstrong,\" fully supporting every substantive claim in the answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.574,
+          "answer": "The second person to walk on the Moon was **Buzz Aldrin**, who stepped onto the lunar surface shortly after mission commander Neil Armstrong during the Apollo 11 mission in 1969.\n\nSource: Wikipedia article \"Buzz Aldrin\""
+        },
+        {
+          "name": "speed_of_sound",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer \u2014 343 m/s at 20 \u00b0C and 331 m/s at 0 \u00b0C in air at sea level \u2014 is directly supported by the retrieved Wikipedia text from the \"Speed of sound\" article."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.202,
+          "answer": "The speed of sound in air at sea level is approximately **343 m/s** at 20 \u00b0C (68 \u00b0F), or about **331 m/s** at 0 \u00b0C (32 \u00b0F). The commonly cited value is ~343 m/s.\n\nSource: Wikipedia article \"Speed of sound.\""
+        },
+        {
+          "name": "olympics_2016_host_capital",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.725,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 0.5,
+              "reasons": [
+                "under-searched: 1 of \u22652 expected search(es)"
+              ]
+            },
+            "grounding": {
+              "score": 0.4,
+              "reasons": [
+                "The retrieved text confirms that the 2016 Summer Olympics were held in Brazil/Rio de Janeiro, but it does not mention Bras\u00edlia as the capital of Brazil, so that key claim relies on information not found in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.13,
+          "answer": "The 2016 Summer Olympics were hosted by Brazil (in Rio de Janeiro). The capital of Brazil is **Bras\u00edlia**.\n\nSources: \"Football at the 2016 Summer Olympics\" and general knowledge confirmed via Wikipedia."
+        },
+        {
+          "name": "sahara_continent_longest_river",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.85,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 0.5,
+              "reasons": [
+                "under-searched: 1 of \u22652 expected search(es)"
+              ]
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text from the Congo River and Niger River Wikipedia articles both reference the Nile as the longest river in Africa, directly supporting the agent's claim that the Nile is the longest river in Africa."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.945,
+          "answer": "The Sahara Desert is located in Africa, and the longest river on that continent is the **Nile River**.\n\nSources: \"Congo River\" and \"Niger River\" Wikipedia articles (both reference the Nile as the longest river in Africa)."
+        },
+        {
+          "name": "alexander_tutor_birth_country",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 0.5,
+              "reasons": [
+                "under-searched: 1 of \u22652 expected search(es)"
+              ]
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text from \"Stagira (ancient city)\" directly states that Stagira is located in \"the Greek province of Central Macedonia\" and is \"the birthplace of Aristotle... teacher of Alexander the Great,\" fully supporting all key claims in the answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.266,
+          "answer": "Aristotle, who tutored Alexander the Great, was born in the ancient city of Stagira, located on the Chalkidice peninsula in what is today **Greece** (specifically, the Central Macedonia region).\n\nSources: Wikipedia articles \"Stagira (ancient city)\" and \"Alexander the Great.\""
+        },
+        {
+          "name": "first_president_successor",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.85,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 0.5,
+              "reasons": [
+                "under-searched: 1 of \u22652 expected search(es)"
+              ]
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text confirms John Adams was the second president from 1797 to 1801 and was the first vice president, supporting most claims in the answer, though the text doesn't explicitly state he was Washington's Vice President (only that he was the first Vice President from 1789-1797)."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 7.386,
+          "answer": "John Adams immediately succeeded George Washington (the first U.S. President), serving as the second President of the United States from 1797 to 1801. He had previously been Washington's Vice President.\n\nSource: Wikipedia article \"John Adams.\""
+        },
+        {
+          "name": "eiffel_tower_country_currency",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.8,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 0.5,
+              "reasons": [
+                "under-searched: 1 of \u22652 expected search(es)"
+              ]
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The retrieved text confirms that the euro is an official currency used by EU member states (supporting France using the euro), but the text does not explicitly state that France uses the euro or that the Eiffel Tower is in Paris \u2014 those specific claims rely on background knowledge not present in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.717,
+          "answer": "The Eiffel Tower stands in Paris, the capital of France. France's currency today is the **euro (\u20ac)**.\n\nSource: Wikipedia article \"Euro.\""
+        },
+        {
+          "name": "world_wars_gap",
+          "category": "computation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text explicitly states World War I began on 28 July 1914 and World War II began on 1 September 1939, directly supporting the agent's claims about both start dates and the 25-year gap between them."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.051,
+          "answer": "25 years passed between the start of World War I (28 July 1914) and the start of World War II (1 September 1939).\n\nSources: Wikipedia articles \"World War I\" and \"World War II\"."
+        },
+        {
+          "name": "newton_einstein_older_at_death",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.85,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.4,
+              "reasons": [
+                "Albert Einstein's dates (14 March 1879 \u2013 18 April 1955, age 76) are directly supported by the retrieved Wikipedia text, but Isaac Newton's specific birth/death dates (25 December 1642 \u2013 20 March 1727, age 84) are not present in the retrieved text \u2014 only a vague mention of \"birth in 1643\" appears, with no death date or age provided."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.932,
+          "answer": "Isaac Newton lived longer.\n\n- **Isaac Newton**: 25 December 1642 \u2013 20 March 1727 (age 84)\n- **Albert Einstein**: 14 March 1879 \u2013 18 April 1955 (age 76)\n\nNewton outlived Einstein by about 8 years.\n\nSources: Wikipedia articles \"Albert Einstein\" and \"Early life of Isaac Newton.\""
+        },
+        {
+          "name": "georgia_country_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text explicitly states \"Tbilisi, the capital and largest city\" of Georgia, directly supporting both claims in the agent's answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.83,
+          "answer": "The capital of Georgia (the country in the Caucasus) is **Tbilisi**, which is also its largest city.\n\nSource: Wikipedia article \"Georgia (country)\"."
+        },
+        {
+          "name": "washington_state_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text from the Washington (state) Wikipedia article directly states \"Olympia is the state capital,\" which fully supports the agent's answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.212,
+          "answer": "The capital of the U.S. state of Washington is **Olympia**.\n\nSource: Wikipedia article \"Washington (state)\""
+        },
+        {
+          "name": "shakespeare_100_sonnets",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved Wikipedia text explicitly states Shakespeare wrote \"154 sonnets\" in both the William Shakespeare article and Sonnet 20 article, directly supporting the agent's answer that he wrote 154 sonnets, not 100."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.645,
+          "answer": "No. William Shakespeare wrote **154 sonnets**, not 100.\n\nSource: Wikipedia article \"William Shakespeare\" (and \"Sonnet 20\")."
+        },
+        {
+          "name": "galileo_planet_discovery",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The answer's core claim \u2014 that Galileo discovered Jupiter's four largest moons (Io, Europa, Ganymede, Callisto) in 1610 and not a new planet \u2014 is partially supported by the retrieved text (the \"Refracting telescope\" snippet mentions Galileo discovered the Galilean satellites of Jupiter in 1610, and the \"Galilean moons\" snippet references Galileo's discovery), but the specific names of the four moons and the fuller explanation are not found in the retrieved excerpts."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 6.644,
+          "answer": "Galileo did not actually discover a *planet* in 1610. When he first turned his telescope to the sky in January 1610, he discovered the four largest moons of **Jupiter** \u2014 Io, Europa, Ganymede, and Callisto \u2014 now known as the Galilean moons. Jupiter itself was already known since antiquity.\n\nSo the common phrasing of the question is a bit misleading: Galileo discovered moons orbiting the planet Jupiter, not a new planet.\n\nSources: Wikipedia articles \"Galilean moons\" and \"Refracting telescope.\""
+        },
+        {
+          "name": "nobel_mathematics",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The core claim that there is no Nobel Prize in Mathematics is directly supported by the retrieved text, and the Abel Prize description as \"modeled after the Nobel Prizes\" is also supported, but the specific claims about Fields Medal award years (1998, 2002) and the Wolf Prize winners (Raoul Bott and Jean-Pierre Serre) are not found in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 7.033,
+          "answer": "There is no Nobel Prize in Mathematics \u2014 Alfred Nobel never established one. So no one won a \"Nobel Prize in Mathematics\" in 2000 or any other year.\n\nThe closest equivalents (often called the \"Nobel Prize of mathematics\") are:\n\n- **The Fields Medal**, awarded every four years. It was *not* awarded in 2000 (the nearest years were 1998 and 2002).\n- **The Abel Prize**, modeled directly after the Nobel Prizes, but it wasn't established until 2002 (first awarded in 2003).\n\nIf you were thinking of a specific mathematics honor from 2000, let me know and I can look it up \u2014 for example, the **Wolf Prize in Mathematics 2000** was awarded to Raoul Bott and Jean-Pierre Serre.\n\nSource: Wikipedia articles \"Nobel Prize controversies\" and \"Abel Prize\"."
+        },
+        {
+          "name": "mercury_element_atomic_number",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 0.775,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.1,
+              "reasons": [
+                "The retrieved text does not contain any specific information about mercury's atomic number (80); the agent's answer relies on recalled knowledge rather than the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 6.442,
+          "answer": "The atomic number of mercury (the chemical element, symbol Hg) is **80**.\n\nSource: Wikipedia, \"List of chemical elements.\""
+        },
+        {
+          "name": "java_island_country",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every factual claim in the answer \u2014 Java being in Indonesia, it being a Greater Sunda Island, the population of 156.9 million, ~56% of Indonesia's population, 7% of land area, and Jakarta on Java's northwestern coast \u2014 is directly supported by the retrieved Wikipedia extract."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.222,
+          "answer": "Java is located in **Indonesia**. It is one of the Greater Sunda Islands and is the world's most populous island, with about 156.9 million people (as of mid-2024) \u2014 roughly 56% of Indonesia's population, despite making up only 7% of the country's land area. Indonesia's capital, Jakarta, sits on Java's northwestern coast.\n\nSource: Wikipedia article \"Java\"."
+        },
+        {
+          "name": "phoenix_state_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The answer's claims that Phoenix is the capital and most populous city of Arizona are directly and explicitly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.405,
+          "answer": "Phoenix is the capital (and most populous city) of **Arizona**.\n\nSource: Wikipedia article \"Phoenix, Arizona.\""
+        },
+        {
+          "name": "paris_trojan_prince_city",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer \u2014 Paris being prince of Troy, son of King Priam and Queen Hecuba, younger brother of Hector, and his elopement with Helen (wife of Menelaus/Sparta) triggering the Trojan War \u2014 is directly supported by the retrieved Wikipedia text on Paris (mythology)."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 8.495,
+          "answer": "Paris was a prince of **Troy**. He was the son of King Priam and Queen Hecuba, and the younger brother of Hector. His elopement with Helen (wife of the Spartan king Menelaus) sparked the Trojan War.\n\nSource: Wikipedia, \"Paris (mythology)\""
+        },
+        {
+          "name": "amazon_river_continent",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text explicitly states \"The Amazon River in South America is the largest river by discharge volume of water in the world,\" directly supporting the agent's answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.519,
+          "answer": "The Amazon River is located in **South America**.\n\nSource: Wikipedia, \"Amazon River.\""
+        },
+        {
+          "name": "larger_russia_canada",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The retrieved text confirms Canada is the \"second-largest country by total area\" and that Russia is \"the largest country in Asia and the world,\" supporting the core claim that Russia is larger, but the specific area figures (~17.1 million km\u00b2 for Russia and ~9.98 million km\u00b2 for Canada) are not present in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.18,
+          "answer": "**Russia** is larger by total area. Russia is the largest country in the world (~17.1 million km\u00b2), while Canada is the second-largest (~9.98 million km\u00b2).\n\nSources: Wikipedia articles \"List of countries and dependencies by area\" and \"Canada.\""
+        },
+        {
+          "name": "larger_jupiter_saturn",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.95,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.8,
+              "reasons": [
+                "The core claim that Jupiter is larger than Saturn is well supported, and the \"11 times Earth's diameter\" and \"second largest\" facts are directly in the retrieved text, but the specific ~143,000 km and ~120,500 km diameter figures are not present in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 6.983,
+          "answer": "**Jupiter** is larger by diameter. Jupiter is the largest planet in the Solar System, with a diameter roughly 11 times that of Earth (~143,000 km), while Saturn is the second largest, with an average radius about 9 times that of Earth (~120,500 km diameter).\n\nSources: Wikipedia articles \"Jupiter\" and \"Saturn\"."
+        },
+        {
+          "name": "larger_pacific_atlantic",
+          "category": "comparison",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every factual claim in the answer \u2014 the Pacific being the largest ocean at 165,250,000 km\u00b2 (63,800,000 sq mi) and the Atlantic being the second largest at 85,133,000 km\u00b2 (32,870,000 sq mi) \u2014 is directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.772,
+          "answer": "The **Pacific Ocean** is larger by area. It covers about 165,250,000 km\u00b2 (63,800,000 sq mi), making it the largest of Earth's oceanic divisions, while the Atlantic Ocean is the second largest at about 85,133,000 km\u00b2 (32,870,000 sq mi) \u2014 roughly half the Pacific's size.\n\nSources: Wikipedia articles \"Pacific Ocean\" and \"Atlantic Ocean\"."
+        },
+        {
+          "name": "born_first_galileo_newton",
+          "category": "comparison",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All key claims in the answer are directly supported by the retrieved text: Galileo's birth date of 15 February 1564 is confirmed in the Galileo Galilei article extract, and Newton's birth date of 4 January 1643 (O.S. 25 December 1642) is confirmed in the Isaac Newton article extract."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.7,
+          "answer": "Galileo Galilei was born first. He was born on 15 February 1564, while Isaac Newton was born on 4 January 1643 (25 December 1642 O.S.) \u2014 about 79 years later.\n\nSources: Wikipedia articles \"Galileo Galilei\" and \"Isaac Newton\"."
+        },
+        {
+          "name": "hotter_sun_venus",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.963,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.85,
+              "reasons": [
+                "The Sun's photosphere temperature range of 4,400\u20136,600 K and Venus's surface temperature of ~735 K (462 \u00b0C) are both directly supported by the retrieved text (Photosphere and Venus/Atmosphere of Venus articles), but the agent's claim of \"roughly ten times cooler\" and the specific average of ~5,500 \u00b0C for the Sun are inferred calculations not explicitly stated in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.964,
+          "answer": "The Sun is far hotter at the surface. The Sun's visible surface (the photosphere) has a temperature of roughly 4,400\u20136,600 K (about 5,500 \u00b0C on average), while Venus's surface temperature is around 735 K (about 462 \u00b0C) \u2014 extreme for a planet, but still roughly ten times cooler than the Sun's surface.\n\nSources: Wikipedia articles \"Photosphere,\" \"Venus,\" and \"Atmosphere of Venus.\""
+        }
+      ]
+    },
+    "claude-sonnet-4-6": {
+      "passed": 36,
+      "total": 37,
+      "mean_score": 0.9469594594594595,
+      "avg_seconds": 5.803466202623551,
+      "dimensions": {
+        "answer": 0.9864864864864865,
+        "search": 0.9864864864864865,
+        "grounding": 0.8418918918918918,
+        "calibration": 0.972972972972973
+      },
+      "categories": {
+        "factual": {
+          "passed": 6,
+          "total": 6
+        },
+        "false_premise": {
+          "passed": 5,
+          "total": 5
+        },
+        "unanswerable": {
+          "passed": 2,
+          "total": 3
+        },
+        "contrastive": {
+          "passed": 4,
+          "total": 4
+        },
+        "multi_hop": {
+          "passed": 5,
+          "total": 5
+        },
+        "computation": {
+          "passed": 1,
+          "total": 1
+        },
+        "comparison": {
+          "passed": 6,
+          "total": 6
+        },
+        "disambiguation": {
+          "passed": 7,
+          "total": 7
+        }
+      },
+      "cases": [
+        {
+          "name": "australia_capital",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every factual claim in the answer \u2014 Canberra as Australia's capital, its location in the ACT, the compromise between Sydney and Melbourne, its status as Australia's largest inland city, and the June 2025 population of 484,630 \u2014 is directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.145,
+          "answer": "The capital of Australia is **Canberra**. It is located in the Australian Capital Territory (ACT) and was established as a compromise between Sydney and Melbourne after the federation of the Australian colonies. As of 2025, it has an estimated population of about 484,630, making it Australia's largest inland city.\n\n*(Source: Wikipedia \u2013 \"Canberra\")*"
+        },
+        {
+          "name": "periodic_table_author",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The retrieved text confirms Mendeleev as a key contributor and mentions Julius Lothar Meyer, but does not support the specific claims about 1869, leaving gaps for undiscovered elements, or predicting their properties \u2014 those details appear to come from the agent's background knowledge rather than the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.292,
+          "answer": "**Dmitri Mendeleev** is most widely credited with creating the periodic table of elements. The Russian chemist developed his version of the periodic table in **1869**, organizing elements by their atomic weights and recurring chemical properties. He is particularly celebrated because his table left gaps for elements that had not yet been discovered, and he successfully predicted their properties \u2014 predictions that were later confirmed.\n\nIt's worth noting that German chemist **Julius Lothar Meyer** independently developed a similar table around the same time, so he sometimes shares partial credit. However, Mendeleev is the name most associated with the invention of the periodic table.\n\n*(Source: Wikipedia \u2013 \"History of the periodic table\")*"
+        },
+        {
+          "name": "speed_of_light",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The agent's claim that the speed of light is exactly 299,792,458 m/s (and thus approximately 299,792 km/s or ~300,000 km/s) is directly supported by the retrieved Wikipedia text, which states the speed of light in vacuum is \"exactly equal to 299792458 m\u22c5s\u22121\"."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.464,
+          "answer": "The speed of light in a vacuum is exactly **299,792,458 m/s**, which is approximately **299,792 km/s** (or roughly **300,000 km/s**).\n\n*(Source: Wikipedia \u2013 \"Speed of light\")*"
+        },
+        {
+          "name": "tallest_mountain",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.95,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.8,
+              "reasons": [
+                "The core claims about Mount Everest being the highest mountain above sea level at 8,848.86 m (29,031.7 ft) and Mauna Kea being the tallest from base-to-peak are directly supported by the retrieved text (particularly from \"Extremes on Earth\" and \"Tallest mountain\" snippets), though the specific figure of ~10,210 m for Mauna Kea is not found in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.41,
+          "answer": "The highest mountain above sea level on Earth is **Mount Everest**, located in the Himalayas of Asia. Its summit stands at **8,848.86 meters (29,031.7 feet)** above mean sea level.\n\n*(Source: Wikipedia \u2013 \"Extremes on Earth\" and \"List of highest mountains on Earth\")*\n\n> **Fun fact:** While Mount Everest is the *highest* above sea level, it is not technically the *tallest* mountain. That title belongs to **Mauna Kea** in Hawaii, which measures about 10,210 meters (33,500 ft) from its oceanic base to its peak \u2014 though much of it is submerged underwater."
+        },
+        {
+          "name": "dna_structure",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The retrieved text confirms Watson and Crick (and Wilkins) in relation to the DNA double helix discovery, and mentions Rosalind Franklin's role, but key specific claims in the answer\u2014such as the paper being published in Nature in April 1953, the Nobel Prize being in Physiology or Medicine awarded in 1962, and Franklin's X-ray diffraction images\u2014are not directly supported by the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.224,
+          "answer": "The two scientists most famous for describing the double-helix structure of DNA in 1953 are **James Watson** and **Francis Crick**. They published their landmark paper in the journal *Nature* in April 1953 and were awarded the Nobel Prize in Physiology or Medicine in 1962 for this discovery (along with Maurice Wilkins). It is also worth noting that the work of **Rosalind Franklin**, whose X-ray diffraction images of DNA were crucial, played a significant but often under-credited role in the discovery.\n\n*(Sources: Wikipedia articles \"The Double Helix\" and \"Rosalind Franklin\")*"
+        },
+        {
+          "name": "moon_landing_year",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The core claims (1969, Apollo 11, July 16 launch, July 20 landing, Neil Armstrong and Buzz Aldrin) are supported by the retrieved text, though the specific July 20 landing date and the mention of \"walking on the lunar surface\" are not explicitly stated in the extracted passages (only the year 1969 and Apollo 11 are confirmed), while Armstrong and Aldrin are confirmed via the book snippet."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.222,
+          "answer": "Humans first landed on the Moon in **1969**. The mission was **Apollo 11**, which launched on July 16 and landed on the Moon on July 20, 1969, with astronauts Neil Armstrong and Buzz Aldrin becoming the first humans to walk on the lunar surface. *(Source: Wikipedia \u2013 \"Apollo 11\" and \"Moon landing\")*"
+        },
+        {
+          "name": "einstein_nobel",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The key claims \u2014 that Einstein won the 1921 Nobel Prize in Physics, announced in 1922, for his discovery of the law of the photoelectric effect (not relativity) \u2014 are directly supported by the retrieved text from \"List of awards and honors received by Albert Einstein.\""
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 8.382,
+          "answer": "Actually, Einstein did **not** win the Nobel Prize for his theory of relativity. He was awarded the **1921 Nobel Prize in Physics** (announced in 1922) *\"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect.\"*\n\nThis is a common misconception \u2014 the Nobel Committee at the time did not cite relativity as the reason for the award. The prize was given for his explanation of the photoelectric effect, which was a foundational contribution to quantum theory.\n\n*(Source: Wikipedia \u2013 \"List of awards and honors received by Albert Einstein\")*"
+        },
+        {
+          "name": "great_wall_from_moon",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.725,
+          "dimensions": {
+            "answer": {
+              "score": 0.5,
+              "reasons": [
+                "missing any of: ['not visible', 'cannot be seen', \"can't be seen\", 'is a myth', 'not true', \"isn't visible\"]"
+              ]
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.4,
+              "reasons": [
+                "The retrieved text confirms the myth-debunking premise and some key facts (Moon's distance of ~380,000 km, ISS orbit of ~420 km), but most specific claims in the answer \u2014 the Wall's width (4.5\u20139 metres), Yang Liwei's 2003 spaceflight, the myth's origin traced to 1932, and the hair-from-3km analogy \u2014 are not present in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 4,
+          "seconds": 16.836,
+          "answer": "The premise of your question is actually based on a **myth**. The Great Wall of China is **not** visible from the Moon with the naked eye. This is one of the most widespread misconceptions about the Great Wall.\n\nHere's why it's physically impossible:\n\n- **Distance**: The Moon is approximately **380,000 km (240,000 miles)** away from Earth.\n- **The Wall's width**: The Great Wall is only about **4.5 to 9 metres (15\u201330 feet) wide** \u2014 roughly the width of a highway. At the distance of the Moon, resolving an object that narrow would be like trying to see a single human hair from 3 kilometres away.\n- **Optical limits**: No human eye could resolve something so narrow at such an enormous distance. The angular width of the Wall as seen from the Moon would be thousands of times smaller than what the human eye can detect.\n\n**What about from low Earth orbit?**\nEven from the International Space Station (orbiting at ~420 km above Earth), the Great Wall is essentially invisible to the naked eye under normal conditions. Chinese astronaut Yang Liwei looked for it during his 2003 spaceflight and could not see it. Some astronauts have reported glimpsing it under exceptionally ideal lighting and atmospheric conditions using cameras with zoom lenses, but not with the naked eye alone.\n\n**Where did the myth come from?**\nThe claim has been traced back as far as 1932, and was popularized in various books and encyclopedias over the 20th century \u2014 but it was never based on any scientific or observational evidence.\n\n*(Sources: Wikipedia articles \"Great Wall of China\" and \"Artificial structures visible from space\")*"
+        },
+        {
+          "name": "franklin_president",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The core claim that Benjamin Franklin never served as president is consistent with the retrieved text (which shows no presidency for Franklin), and the description of him as \"one of the Founding Fathers\" and \"a drafter and signer of the Declaration\" is directly supported by the Wikipedia extract on Benjamin Franklin, but other claims (like the list of early presidents and Franklin's 1790 death date) are not found in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.919,
+          "answer": "Benjamin Franklin **never served as President of the United States**. He is one of the Founding Fathers \u2014 a drafter and signer of the Declaration of Independence \u2014 but he never held the presidency.\n\nIt is a common misconception, likely because Franklin is such a prominent historical figure. The early U.S. presidents were George Washington (1st), John Adams (2nd), Thomas Jefferson (3rd), and so on. Benjamin Franklin died in 1790, before much of the presidency's history unfolded.\n\n*(Source: Wikipedia \u2013 \"Benjamin Franklin\")*"
+        },
+        {
+          "name": "sixtieth_president",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The retrieved text confirms the existence of the presidency and mentions George Washington as the first president, but does not explicitly state the total number of presidents (47) or confirm Trump as the 47th; however, the 2024 election result snippet references Trump as \"former president,\" and the answer's core claim that there is no 60th president is reasonably supported by the absence of any such information in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.868,
+          "answer": "There is no 60th President of the United States. As of today, the United States has had **47 presidents**, with **Donald Trump** being the 47th. The numbering only goes up to 47, so a 60th president does not exist yet.\n\n*(Based on information from the Wikipedia article: \"President of the United States\")*"
+        },
+        {
+          "name": "unobtainium_atomic_number",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The agent's answer accurately reflects the retrieved Wikipedia text, which confirms unobtainium is not a real element but a fictional/humorous term derived from \"unobtainable\" with the suffix -ium, used in engineering and fiction to describe an ideally suited but impractically obtainable material."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.931,
+          "answer": "**Unobtainium is not a real chemical element** and therefore has no atomic number. It is a fictional or humorous term used in engineering and fiction to describe a material that is ideally suited for a particular application but is impractically difficult or impossible to obtain. The word is derived from \"unobtainable\" with the suffix *-ium*, which is commonly used in element names, giving it the *sound* of a real element \u2014 but it has no place on the periodic table.\n\n*(Source: Wikipedia \u2014 \"Unobtainium\")*"
+        },
+        {
+          "name": "australia_largest_city",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text from the Sydney and Australia Wikipedia articles directly supports the claims that Sydney is the most populous city in Australia, is the capital of New South Wales, and has a population of more than five million people."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.742,
+          "answer": "The largest city in Australia by population is **Sydney**, the capital of New South Wales. It is the most populous city in Australia, with a population of more than five million people. This is confirmed by the Wikipedia articles on *Sydney* and *List of cities in Australia by population*."
+        },
+        {
+          "name": "tallest_mountain_base_to_summit",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All key claims in the answer \u2014 Mauna Kea being the tallest mountain base to summit, its height of 4,207.3 m above sea level, its total height of 9,330 m (30,610 ft) from its underwater base, and Everest's 8,848.86 m height \u2014 are directly supported by the retrieved Wikipedia text from the Mauna Kea and Mountain articles."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 6.932,
+          "answer": "The tallest mountain on Earth, measured from **base to summit**, is **Mauna Kea** in Hawaii. While it stands only 4,207.3 meters (13,803 feet) above sea level, its base sits deep on the ocean floor. Measuring from that underwater base to its peak gives it a total height of **9,330 meters (30,610 feet)** \u2014 surpassing even Mount Everest's height above sea level of 8,848.86 meters (29,031.7 feet).\n\n*Sources: Wikipedia articles \"Mauna Kea\" and \"Mountain\"*"
+        },
+        {
+          "name": "second_moonwalker",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The core claim that Buzz Aldrin was the second person to walk on the Moon after mission commander Neil Armstrong is directly supported by the retrieved Buzz Aldrin Wikipedia text, though the specific detail about Apollo 11 and \"July 1969\" is not explicitly mentioned in the retrieved excerpts."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.303,
+          "answer": "The second person to walk on the Moon was **Buzz Aldrin**. He stepped onto the lunar surface during the **Apollo 11** mission in July 1969, shortly after mission commander **Neil Armstrong**, who was the first. This information comes from the Wikipedia article on *Buzz Aldrin*."
+        },
+        {
+          "name": "speed_of_sound",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All three values cited in the answer (343 m/s at 20\u00b0C, 331 m/s at 0\u00b0C, and 340 m/s at 15\u00b0C) are directly supported by the retrieved Wikipedia text from \"Speed of sound\" and \"Mach number\" snippets."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.931,
+          "answer": "The approximate speed of sound in air at sea level is:\n\n- **343 m/s** at a standard room temperature of **20 \u00b0C (68 \u00b0F)**\n- **331 m/s** at **0 \u00b0C (32 \u00b0F)**\n- **340 m/s** at the standard atmospheric temperature of **15 \u00b0C (59 \u00b0F)**\n\nThe most commonly cited value is **~343 m/s**, though it varies with temperature. *(Source: Wikipedia \u2013 \"Speed of sound\")*"
+        },
+        {
+          "name": "olympics_2016_host_capital",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.725,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 0.5,
+              "reasons": [
+                "under-searched: 1 of \u22652 expected search(es)"
+              ]
+            },
+            "grounding": {
+              "score": 0.4,
+              "reasons": [
+                "The retrieved text confirms Brazil and Rio de Janeiro hosted the 2016 Summer Olympics (from the football and gymnastics articles), but does not mention Bras\u00edlia as Brazil's capital, so that key claim is ungrounded in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.792,
+          "answer": "The 2016 Summer Olympics were hosted by **Brazil** (in Rio de Janeiro). The capital of Brazil is **Bras\u00edlia**.\n\n*(Sources: Wikipedia articles on the 2016 Summer Olympics and Brazil)*"
+        },
+        {
+          "name": "sahara_continent_longest_river",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.95,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.8,
+              "reasons": [
+                "The retrieved text supports that the Sahara is in Africa (North Africa specifically), and that the Congo River is the second-longest and the Niger is the third-longest river in Africa, implying the Nile is the longest \u2014 but the Nile being the longest river in Africa is only stated indirectly through these references, not explicitly stated as the longest."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 4.184,
+          "answer": "The Sahara Desert is located on the continent of **Africa**. Based on the search results, the longest river in Africa is the **Nile River**, which is also referenced as the longest in Africa (with the Congo River being the second-longest and the Niger River the third-longest).\n\n*(Sources: Wikipedia articles \"Sahara\" and \"Congo River\")*"
+        },
+        {
+          "name": "alexander_tutor_birth_country",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All key claims in the answer \u2014 that Aristotle tutored Alexander the Great, that Aristotle was born in Stagira in Chalkidiki (northern Greece), and that this is in present-day Greece \u2014 are directly supported by the retrieved Wikipedia texts."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 3,
+          "seconds": 9.832,
+          "answer": "The philosopher who tutored Alexander the Great was **Aristotle**. He was born in the city of **Stagira**, in the Chalkidiki region of northern Greece \u2014 which is located in **present-day Greece**.\n\n*(Sources: Wikipedia articles on \"Alexander the Great\" and \"Aristotle\")*"
+        },
+        {
+          "name": "first_president_successor",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All claims in the answer are directly supported by the retrieved text: George Washington was the first president serving from 1789 to 1797, and John Adams was the second president serving from 1797 to 1801."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 9.831,
+          "answer": "The first President of the United States was **George Washington**, who served from 1789 to 1797. He was immediately succeeded by **John Adams**, who became the **second President of the United States**, serving from 1797 to 1801.\n\n*(Sources: Wikipedia articles \"George Washington\" and \"John Adams\")*"
+        },
+        {
+          "name": "eiffel_tower_country_currency",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The claim that France uses the Euro is partially supported (the Euro article confirms it's the official currency of 21 EU member states, implying France, but France is not explicitly named), while the claim that the Eiffel Tower is in Paris, France is only indirectly supported via a replica article mentioning \"the original located in Paris, France,\" making the grounding partial rather than direct."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 3,
+          "seconds": 8.079,
+          "answer": "The **Eiffel Tower** is located in **Paris, France**. Today, France uses the **Euro (\u20ac)** as its official currency, which it adopted as part of the eurozone. *(Sources: Wikipedia articles on the Eiffel Tower and the Euro)*"
+        },
+        {
+          "name": "world_wars_gap",
+          "category": "computation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both key dates are directly supported by the retrieved text: WWI beginning on 28 July 1914 (from \"Causes of World War I\") and WWII beginning on 1 September 1939 (from \"World War II\"), and the 25-year calculation follows logically from those dates."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 4.546,
+          "answer": "Based on Wikipedia:\n\n- **World War I** began on **28 July 1914** (source: *Causes of World War I*)\n- **World War II** began on **1 September 1939** (source: *World War II*)\n\nFrom July 28, 1914 to September 1, 1939, **25 years** passed between the start of World War I and the start of World War II."
+        },
+        {
+          "name": "newton_einstein_older_at_death",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.988,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.95,
+              "reasons": [
+                "The birth and death dates for both Newton (4 January 1643 \u2013 31 March 1727) and Einstein (14 March 1879 \u2013 18 April 1955) are directly supported by the retrieved Wikipedia text, and the derived ages (84 and 76) follow logically from those dates; the only minor ungrounded element is the explicit statement \"Newton outlived Einstein by about 8 years,\" which is a calculation not stated in the text but follows directly from the supported dates."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 4.631,
+          "answer": "**Isaac Newton lived longer.**\n\n- **Isaac Newton** was born on January 4, 1643, and died on March 31, 1727, living to the age of **84**.\n- **Albert Einstein** was born on March 14, 1879, and died on April 18, 1955, living to the age of **76**.\n\nNewton outlived Einstein by about 8 years.\n\n*(Sources: Wikipedia articles \"Isaac Newton\" and \"Albert Einstein\")*"
+        },
+        {
+          "name": "georgia_country_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both claims in the answer \u2014 that Tbilisi is the capital of Georgia and that it is home to over a third of Georgia's population \u2014 are directly supported by the retrieved Wikipedia text from the \"Georgia (country)\" article."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.46,
+          "answer": "The capital of Georgia (the country in the Caucasus) is **Tbilisi**. It is also the largest city in the country, home to over a third of Georgia's population. *(Source: Wikipedia \u2013 \"Georgia (country)\" and \"Tbilisi\")*"
+        },
+        {
+          "name": "washington_state_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both claims in the answer \u2014 that Olympia is Washington's state capital and that Seattle is its most populous city \u2014 are directly and explicitly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.739,
+          "answer": "The capital of Washington state is **Olympia**. It is distinct from Seattle, which is the state's most populous city. *(Source: Wikipedia \u2014 \"Washington (state)\")*"
+        },
+        {
+          "name": "shakespeare_100_sonnets",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer \u2014 the 154 sonnets published in 1609, the six additional sonnets in Romeo and Juliet, Henry V, and Love's Labour's Lost, and the partial sonnet in Edward III \u2014 is directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.087,
+          "answer": "No, William Shakespeare did not write exactly 100 sonnets. According to Wikipedia's article on **Shakespeare's sonnets**, he wrote **154 sonnets** that were first published together in a quarto in 1609. Beyond those, there are also **six additional sonnets** embedded within his plays (*Romeo and Juliet*, *Henry V*, and *Love's Labour's Lost*), as well as a partial sonnet in *Edward III*."
+        },
+        {
+          "name": "galileo_planet_discovery",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.875,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.5,
+              "reasons": [
+                "The agent's core claim \u2014 that Galileo discovered the four Galilean moons of Jupiter (Io, Europa, Ganymede, Callisto) rather than a planet \u2014 is partially supported by the retrieved text (which mentions \"Galileo Galilei's discovered the Galilean satellites of Jupiter in 1610\" and references to Galilean moons), but the specific details about phases of Venus, Moon craters, and the named moons are not found in the retrieved excerpts."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 5.861,
+          "answer": "Galileo did **not** actually discover a new planet when he first pointed his telescope at the sky in 1610. What he famously discovered were the **four largest moons of Jupiter** \u2014 now known as the **Galilean moons** (Io, Europa, Ganymede, and Callisto). He also made other notable observations, such as the phases of Venus and the craters of the Moon.\n\nNo planet is credited as being \"discovered\" by Galileo in 1610. The premise of the question is a common misconception \u2014 Galileo was an observer and astronomer who made groundbreaking telescopic observations, but planet discovery was not among them.\n\n*(Source: Wikipedia \u2013 \"Galileo Galilei\" and \"Galilean moons\")*"
+        },
+        {
+          "name": "nobel_mathematics",
+          "category": "unanswerable",
+          "passed": false,
+          "overall": 0.675,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The core claim that there is no Nobel Prize in Mathematics is directly supported by the retrieved text (\"No Nobel Prize was established for mathematics\"), though the additional claims about the Fields Medal and Abel Prize are not found in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 0.0,
+              "reasons": [
+                "expected the answer to qualify that it can't find / doesn't exist"
+              ]
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.819,
+          "answer": "There is actually **no Nobel Prize in Mathematics**. The Nobel Prize does not include a category for mathematics. This is a common misconception.\n\nThe closest equivalent to a \"Nobel Prize for Mathematics\" is the **Fields Medal**, which is awarded every four years to mathematicians under the age of 40. There is also the **Abel Prize**, awarded annually since 2003, which is often considered the top honor in mathematics.\n\nWould you like to know who won the Fields Medal or another mathematics award around the year 2000?"
+        },
+        {
+          "name": "mercury_element_atomic_number",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text from \"Mercury (element)\" explicitly states \"Mercury is a chemical element; it has symbol Hg and atomic number 80\" and that it \"is the only metallic element that is known to be liquid at standard temperature and pressure,\" directly supporting all substantive claims in the agent's answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.355,
+          "answer": "The atomic number of mercury (chemical element, symbol **Hg**) is **80**. It is the only metallic element that is liquid at standard temperature and pressure, and is also known as quicksilver.\n\n*(Source: Wikipedia \u2013 \"Mercury (element)\")*"
+        },
+        {
+          "name": "java_island_country",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text explicitly states that Java is located in Indonesia and is the world's most populous island, home to approximately 56% of the Indonesian population, directly supporting all key claims in the answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.131,
+          "answer": "Java is located in **Indonesia**. It is the world's most populous island, home to approximately 56% of Indonesia's total population.\n\n*(Source: Wikipedia \u2014 \"Java\")*"
+        },
+        {
+          "name": "phoenix_state_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer \u2014 Phoenix being the capital of Arizona, the most populous city in the state, the most populous state capital in the U.S., and having over 1.6 million residents at the 2020 census \u2014 is directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.471,
+          "answer": "Phoenix is the capital of **Arizona**. It is also the most populous city in the state and the most populous state capital in the entire United States, with over 1.6 million residents as of the 2020 census.\n\n*(Source: Wikipedia \u2014 \"Phoenix, Arizona\")*"
+        },
+        {
+          "name": "paris_trojan_prince_city",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer \u2014 Paris being a prince of Troy, son of King Priam and Queen Hecuba, and his abduction/elopement of Helen triggering the Trojan War \u2014 is directly supported by the retrieved Wikipedia text on Paris (mythology)."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.446,
+          "answer": "In Greek mythology, Paris was a prince of **Troy**. He was the son of King Priam and Queen Hecuba, and his abduction (or elopement) of Helen \u2014 the wife of Spartan King Menelaus \u2014 was the direct trigger for the Trojan War.\n\n*(Source: Wikipedia \u2013 \"Paris (mythology)\")*"
+        },
+        {
+          "name": "amazon_river_continent",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text directly confirms that the Amazon River is located in South America and is the largest river by discharge, fully supporting the core claim; the additional detail about tributaries extending into Peru and Colombia is also consistent with the text mentioning Peru, though Colombia is not explicitly named in the extract."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.114,
+          "answer": "The Amazon River is located on the continent of **South America**. It flows primarily through Brazil, and its tributaries extend into Peru, Colombia, and several other South American countries.\n\n*(Source: Wikipedia \u2013 \"Amazon River\")*"
+        },
+        {
+          "name": "larger_russia_canada",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text directly supports that Russia is the largest country in the world at 17,125,191 km\u00b2 (6,612,073 sq mi) and that Canada is the second-largest country by total area after Russia; the specific figure for Canada (~9,984,670 km\u00b2) is not explicitly stated in the retrieved text, but all other key claims are well-grounded."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 6,
+          "seconds": 15.526,
+          "answer": "**Russia** is larger by total area.\n\n- **Russia**: ~17,125,191 km\u00b2 (6,612,073 sq mi) \u2014 the largest country in the world.\n- **Canada**: ~9,984,670 km\u00b2 (~3,855,100 sq mi) \u2014 the second-largest country in the world.\n\nRussia is nearly **twice the size** of Canada. As noted in the *Geography of Canada* Wikipedia article, Canada is explicitly ranked second in the world by total area, after Russia."
+        },
+        {
+          "name": "larger_jupiter_saturn",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.9,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.6,
+              "reasons": [
+                "The core claim (Jupiter is larger than Saturn) and the Saturn quote are directly supported by the retrieved text, as is Jupiter's diameter being 11 times Earth's; however, the specific kilometer values (139,820 km and 116,460 km) are not found anywhere in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 6,
+          "seconds": 10.026,
+          "answer": "**Jupiter** is larger in diameter than Saturn.\n\n- **Jupiter's** equatorial diameter is about **139,820 km** (~11 times Earth's diameter), making it the largest planet in the Solar System.\n- **Saturn's** average radius is about 9 times that of Earth, giving it an equatorial diameter of roughly **116,460 km** \u2014 significantly smaller than Jupiter's.\n\nAs Wikipedia's article on Saturn directly notes: *\"Even though Saturn is almost as big as Jupiter, Saturn has less than a third of its mass.\"* Jupiter is both wider and far more massive.\n\n**Sources:** Wikipedia articles on *Jupiter* and *Saturn*."
+        },
+        {
+          "name": "larger_pacific_atlantic",
+          "category": "comparison",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every factual claim in the answer \u2014 Pacific Ocean area (~165,250,000 km\u00b2), Atlantic Ocean area (~85,133,000 km\u00b2), Pacific being the largest of Earth's five oceans, covering ~32% of total surface area, and Atlantic being the second largest \u2014 is directly and explicitly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.206,
+          "answer": "The **Pacific Ocean** is significantly larger than the Atlantic Ocean. Here's the comparison:\n\n- **Pacific Ocean**: ~165,250,000 km\u00b2 (63,800,000 sq mi)\n- **Atlantic Ocean**: ~85,133,000 km\u00b2 (32,870,000 sq mi)\n\nThe Pacific is nearly **twice the size** of the Atlantic and is, in fact, the largest of all five of Earth's oceans, covering about 32% of the planet's total surface area. The Atlantic is the second largest.\n\n*Sources: Wikipedia articles \"Pacific Ocean\" and \"Atlantic Ocean\"*"
+        },
+        {
+          "name": "born_first_galileo_newton",
+          "category": "comparison",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both birth dates cited in the answer (Galileo: 15 February 1564; Newton: 4 January 1643) are directly supported by the retrieved Wikipedia text, and the claim about Galileo dying in January 1642 is also consistent with the retrieved death date of 8 January 1642."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.093,
+          "answer": "**Galileo Galilei** was born first.\n\n- **Galileo Galilei** was born on **15 February 1564** (according to the Wikipedia article *Galileo Galilei*).\n- **Isaac Newton** was born on **4 January 1643** (according to the Wikipedia article *Isaac Newton*).\n\nGalileo was born nearly **79 years** before Newton. Interestingly, Galileo died in January 1642, just about a year before Newton was born."
+        },
+        {
+          "name": "hotter_sun_venus",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The Sun's photosphere temperature range (4,400\u20136,600 K) and Venus's surface temperature (740 K / 467 \u00b0C) are both directly stated in the retrieved text, supporting the core claims; the \"8 to 9 times hotter\" ratio is a calculation from those numbers rather than explicitly stated, and the Venus-hotter-than-Mercury claim is also confirmed in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.898,
+          "answer": "The **Sun** is vastly hotter at its surface than Venus.\n\n- **Sun's surface (photosphere):** between **4,400 and 6,600 K** (~4,127\u20136,327 \u00b0C)\n- **Venus's surface:** about **735\u2013740 K** (~462\u2013467 \u00b0C)\n\nSo the Sun's surface is roughly **8 to 9 times hotter** than the surface of Venus. While Venus is famously the hottest *planet* in our solar system (even hotter than Mercury) due to its intense greenhouse effect, it is nowhere near as hot as the Sun.\n\n**Sources:** Wikipedia articles *Photosphere* and *Atmosphere of Venus*."
+        }
+      ]
+    },
+    "claude-haiku-4-5": {
+      "passed": 36,
+      "total": 37,
+      "mean_score": 0.9621621621621622,
+      "avg_seconds": 4.143396003266193,
+      "dimensions": {
+        "answer": 0.972972972972973,
+        "search": 1.0,
+        "grounding": 0.9027027027027027,
+        "calibration": 0.972972972972973
+      },
+      "categories": {
+        "factual": {
+          "passed": 6,
+          "total": 6
+        },
+        "false_premise": {
+          "passed": 5,
+          "total": 5
+        },
+        "unanswerable": {
+          "passed": 2,
+          "total": 3
+        },
+        "contrastive": {
+          "passed": 4,
+          "total": 4
+        },
+        "multi_hop": {
+          "passed": 5,
+          "total": 5
+        },
+        "computation": {
+          "passed": 1,
+          "total": 1
+        },
+        "comparison": {
+          "passed": 6,
+          "total": 6
+        },
+        "disambiguation": {
+          "passed": 7,
+          "total": 7
+        }
+      },
+      "cases": [
+        {
+          "name": "australia_capital",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All substantive claims in the answer \u2014 that Canberra is the capital of Australia, the largest population centre in the ACT, was established following federation to serve as the seat of government, and was a compromise between Melbourne and Sydney \u2014 are directly supported by the retrieved Wikipedia text on Canberra."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.358,
+          "answer": "The capital of Australia is **Canberra**. It is the capital city of Australia and the largest population centre in the Australian Capital Territory. Canberra was established following the federation of the Australian colonies to serve as the seat of government for the new nation, as a compromise between the two largest cities at the time, Melbourne and Sydney.\n\n(Source: [Canberra](https://en.wikipedia.org/wiki/Canberra) on Wikipedia)"
+        },
+        {
+          "name": "periodic_table_author",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.988,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.95,
+              "reasons": [
+                "All key claims in the answer are directly supported by the retrieved text: Mendeleev being a Russian chemist who created the periodic table, publishing in 1869, formulating the periodic law, his table becoming the first generally accepted one, and predicting the properties of germanium, gallium, and scandium."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 6.951,
+          "answer": "**Dmitri Mendeleev**, a Russian chemist, is credited with creating the periodic table of elements. He published his periodic table in 1869, formulating the periodic law. Mendeleev's version became the first periodic table to become generally accepted. \n\nWhat made his contribution particularly significant was not only that he organized the known elements, but also that he used the periodic law to predict the properties of three elements that had not yet been discovered at the time (germanium, gallium, and scandium).\n\n*Source: Dmitri Mendeleev and Periodic table Wikipedia articles*"
+        },
+        {
+          "name": "speed_of_light",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The agent's answer directly derives the km/s value from the retrieved text's exact value of 299,792,458 m/s, which is fully supported by the Wikipedia extract."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.075,
+          "answer": "The speed of light in a vacuum is approximately **299,792 km/s** (or more precisely 299,792.458 km/s).\n\nThis is based on the exact value of 299,792,458 meters per second established by international agreement. ([Speed of light](https://en.wikipedia.org/wiki/Speed_of_light) - Wikipedia)"
+        },
+        {
+          "name": "tallest_mountain",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.95,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.8,
+              "reasons": [
+                "The claim that Mount Everest is the highest mountain above sea level and its summit is 8,850 m (29,035 ft) above mean sea level is directly supported by the retrieved \"Mountain\" article snippet, and its location in the Himalayas of Asia is also confirmed; however, the specific detail about it being on the border of Nepal and Tibet is not present in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.483,
+          "answer": "**Mount Everest** is the tallest mountain above sea level on Earth. Its summit is **8,850 meters (29,035 feet)** above mean sea level.\n\nLocated in the Himalayas of Asia (on the border of Nepal and Tibet), Mount Everest is the highest point on Earth measured from sea level.\n\nBased on the Wikipedia articles [\"List of highest mountains on Earth\"](https://en.wikipedia.org/wiki/List_of_highest_mountains_on_Earth) and [\"Mountain\"](https://en.wikipedia.org/wiki/Mountain)."
+        },
+        {
+          "name": "dna_structure",
+          "category": "factual",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All substantive claims in the answer \u2014 Watson and Crick proposing the double helix structure, the contributions of Franklin, Gosling, Wilkins, and Watson's 1968 memoir \u2014 are directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.636,
+          "answer": "The two scientists most famous for describing the double-helix structure of DNA in 1953 are **James Watson** and **Francis Crick**. \n\nAccording to Wikipedia's article on the nucleic acid double helix, they proposed the structure based on the work of other scientists including Rosalind Franklin, Raymond Gosling, Maurice Wilkins, and others. Watson later wrote about this discovery in his 1968 memoir \"The Double Helix: A Personal Account of the Discovery of the Structure of DNA.\""
+        },
+        {
+          "name": "moon_landing_year",
+          "category": "factual",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text confirms that Apollo 11 in 1969 was the first crewed mission to land on the Moon, and the Moon article mentions July 20, 1969 specifically, supporting all key claims in the answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.093,
+          "answer": "Humans first landed on the Moon in **1969**. Specifically, this occurred on July 20, 1969, during the Apollo 11 mission.\n\n(Source: Wikipedia - Moon landing)"
+        },
+        {
+          "name": "einstein_nobel",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The agent's key claims \u2014 that Einstein won the Nobel Prize in Physics in 1922 for the 1921 prize, and that it was awarded for the photoelectric effect rather than relativity \u2014 are directly supported by the retrieved text from \"List of awards and honors received by Albert Einstein.\""
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.33,
+          "answer": "Based on the search results, **Albert Einstein won the Nobel Prize in Physics in 1922** (for the 1921 prize). However, it's important to note that he was awarded the prize \"for his services to Theoretical Physics, and especially for his discovery of the law of the photoelectric effect\" \u2014 not specifically for his theory of relativity, according to the Wikipedia article on \"List of awards and honors received by Albert Einstein.\""
+        },
+        {
+          "name": "great_wall_from_moon",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The core claim that the Great Wall is NOT visible from the Moon is directly supported by the retrieved text (\"The Great Wall of China cannot be seen by the naked human eye from the Moon which orbits\"), but other claims\u2014such as the camouflage effect specifically contributing to Moon-distance invisibility, and the wall being visible from lower Earth orbits\u2014are not explicitly supported by the retrieved text snippets."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 4.591,
+          "answer": "Based on the Wikipedia search results, **the Great Wall of China is NOT visible from the Moon with the naked eye**. \n\nAccording to the Wikipedia article on the Great Wall of China, it explicitly states: \"The Great Wall of China cannot be seen by the naked human eye from the Moon which orbits.\"\n\nThis is actually a common misconception. While the Great Wall is an enormous structure, the distance from the Moon to Earth is so vast that even such a large object cannot be resolved by the human eye at that distance. The camouflage effect (the wall being made of local materials that blend in with the surrounding terrain) also contributes to its invisibility from space.\n\nHowever, it's worth noting that the Great Wall *can* be seen from lower Earth orbits, such as from astronauts in space stations or from certain satellite imagery."
+        },
+        {
+          "name": "franklin_president",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The agent's key claims are well-supported: Benjamin Franklin never served as president (consistent with the retrieved text showing him only as \"a writer, scientist, inventor, statesman, diplomat\"), and the details about Franklin Pierce (14th president, 1853-1857) and Franklin D. Roosevelt (32nd president, 1933-1945) are directly confirmed by the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 3.701,
+          "answer": "Based on the search results, **Benjamin Franklin never served as President of the United States**. \n\nThe Wikipedia article on Benjamin Franklin indicates he was \"an American polymath: a writer, scientist, inventor, statesman, diplomat\" who lived from 1706 to 1790. While he was a prominent founding father and statesman, he did not hold the presidency. You may be thinking of other early U.S. presidents with \"Franklin\" in their names, such as Franklin Pierce (14th president, 1853-1857) or Franklin D. Roosevelt (32nd president, 1933-1945)."
+        },
+        {
+          "name": "sixtieth_president",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The agent's key claims \u2014 that there is no 60th President of the United States, that Biden was the 46th president, and that Trump is the 47th president \u2014 are all directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 6,
+          "seconds": 11.301,
+          "answer": "So Biden is the 46th. Since there are only 47 presidents so far (Trump being the 47th), there is no 60th President of the United States yet. The question appears to be asking about a future president or may be based on a misunderstanding. Let me verify this understanding:\n\nBased on my search results, **there is no 60th President of the United States yet**. The United States has only had 47 presidents so far (as of 2025, with Donald Trump being the 47th president). \n\nJoe Biden was the 46th president (2021-2025), and Donald Trump is the 47th president (2017-2021, and again starting in 2025).\n\nIf you're asking about a historical president with a different number, or if you meant to ask about a different president, please let me know and I can help clarify!"
+        },
+        {
+          "name": "unobtainium_atomic_number",
+          "category": "unanswerable",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The retrieved text confirms that unobtainium appears on the list of fictional elements, supporting the claim that it is fictional and not a real element, but the text does not explicitly state that it has no atomic number or describe it as a term used in science fiction/popular culture in the way the answer elaborates."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.914,
+          "answer": "Based on the search results, **unobtainium is not a real element** \u2014 it is a fictional element. It appears on Wikipedia's list of fictional elements, materials, isotopes, and subatomic particles. Therefore, it does not have an actual atomic number, as it does not exist on the periodic table of real elements.\n\nUnobtainium is a made-up term used in science fiction and popular culture to refer to any material that is impossibly difficult or expensive to obtain, or has properties necessary for a story but that don't exist in reality."
+        },
+        {
+          "name": "australia_largest_city",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every factual claim in the answer \u2014 Sydney being the capital of New South Wales, the most populous city in Australia, and having an estimated population of 5,638,830 as of June 2025 \u2014 is directly supported by the retrieved Wikipedia extract from the Sydney article."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 3.815,
+          "answer": "**Sydney** is the largest city in Australia by population. According to Wikipedia, Sydney is the capital city of New South Wales and the most populous city in Australia, with an estimated population of 5,638,830 as of June 2025."
+        },
+        {
+          "name": "tallest_mountain_base_to_summit",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The key claims \u2014 Mauna Kea being the tallest mountain from base to peak at 9,330 m (30,610 ft), and Mount Everest being highest above sea level at 8,848.86 m \u2014 are directly supported by the retrieved text from the \"Mountain\" and \"Extremes on Earth\" excerpts listed in the search results."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 3,
+          "seconds": 5.981,
+          "answer": "Perfect! I found the answer. Based on the Wikipedia search results:\n\n**Mauna Kea** in Hawaii is the tallest mountain on Earth when measured from base to summit, rising approximately **9,330 meters (30,610 feet)** from its base at the ocean floor to its peak.\n\nThis contrasts with Mount Everest, which is the highest mountain above sea level at 8,848.86 meters (29,031.7 feet). Mauna Kea is a dormant shield volcano, and much of its height lies beneath the Pacific Ocean, which is why it doesn't rank as the highest mountain when only measuring above sea level.\n\nSources: [Mountain](https://en.wikipedia.org/wiki/Mountain) and [Extremes on Earth](https://en.wikipedia.org/wiki/Extremes_on_Earth) Wikipedia articles."
+        },
+        {
+          "name": "second_moonwalker",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both the claim that Buzz Aldrin was the second person to walk on the Moon and that he did so after mission commander Neil Armstrong are directly supported by the retrieved Buzz Aldrin Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.175,
+          "answer": "**Buzz Aldrin** was the second person to walk on the Moon. He walked on the lunar surface after mission commander Neil Armstrong during the Apollo 11 mission.\n\nSource: [Buzz Aldrin](https://en.wikipedia.org/wiki/Buzz_Aldrin) Wikipedia article"
+        },
+        {
+          "name": "speed_of_sound",
+          "category": "contrastive",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both key claims \u2014 343 m/s at 20 \u00b0C and 331 m/s at 0 \u00b0C \u2014 are directly and explicitly stated in the retrieved Wikipedia text from the \"Speed of sound\" article."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.397,
+          "answer": "Based on the Wikipedia article \"Speed of sound,\" the approximate speed of sound in air at sea level is:\n\n- **343 m/s** at 20 \u00b0C (68 \u00b0F)\n- **331 m/s** at 0 \u00b0C (32 \u00b0F)\n\nThe value typically cited is **343 m/s** at standard room temperature (20 \u00b0C) at sea level."
+        },
+        {
+          "name": "olympics_2016_host_capital",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text confirms that Bras\u00edlia is the capital of Brazil and that the 2016 Summer Olympics were held in Brazil (Rio de Janeiro), supporting all key claims in the answer; the only minor gap is that the 1960 founding date is supported but the agent's phrasing \"since 1960\" aligns with the retrieved text stating it was founded on 21 April 1960."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 4.173,
+          "answer": "The capital of the country that hosted the 2016 Summer Olympics is **Bras\u00edlia**. Brazil hosted the 2016 Summer Olympics (held in Rio de Janeiro), and Bras\u00edlia has been Brazil's capital since 1960."
+        },
+        {
+          "name": "sahara_continent_longest_river",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The Sahara being in North Africa (part of the African continent) is directly supported by the retrieved Sahara text, and the Nile being the longest river in Africa at 7,088 km is directly supported by the retrieved Nile Wikipedia extract."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 3,
+          "seconds": 5.879,
+          "answer": "Perfect! I have the answer. Based on the Wikipedia search results:\n\nThe longest river on the continent where the Sahara Desert is located is the **Nile River**. \n\nThe Sahara Desert is located in North Africa, which is part of the African continent. According to Wikipedia, the Nile is 7,088 kilometers (4,404 mi) long and is the longest river in Africa."
+        },
+        {
+          "name": "alexander_tutor_birth_country",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text directly supports all key claims: Aristotle tutored Alexander the Great, was born in Stagira, and Stagira is in what is now the Greek province of Central Macedonia (Greece)."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 4,
+          "seconds": 7.217,
+          "answer": "Perfect! I now have the complete answer.\n\n**Greece** is the present-day country where Aristotle, the philosopher who tutored Alexander the Great, was born.\n\nAristotle was born in Stagira, an ancient Greek city located in Chalkidiki in what is now the Greek province of Central Macedonia in northern Greece.\n\nSources: *Aristotle* and *Stagira (ancient city)* on Wikipedia."
+        },
+        {
+          "name": "first_president_successor",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All key claims in the answer \u2014 John Adams being the second president succeeding Washington, Adams serving from 1797 to 1801, Washington's presidency ending in 1797, and Adams being the first Vice President from 1789 to 1797 \u2014 are directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 5.005,
+          "answer": "**John Adams** immediately succeeded George Washington as President of the United States. Adams served from 1797 to 1801, directly following Washington's presidency which ended in 1797. Adams was also notably the first Vice President of the United States, serving under Washington from 1789 to 1797.\n\n(Sources: George Washington and John Adams articles on Wikipedia)"
+        },
+        {
+          "name": "eiffel_tower_country_currency",
+          "category": "multi_hop",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text confirms the Eiffel Tower is in Paris, France, that France is a eurozone member using the euro as its primary currency and sole legal tender, and that euro coins/banknotes were introduced in 2002; the only minor unsupported detail is \"21 member states\" being called out as the count France belongs to, though the Eurozone article does list France explicitly among the 21 members."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 4,
+          "seconds": 7.709,
+          "answer": "Perfect! I now have all the information I need to answer the question.\n\nThe Eiffel Tower stands in **Paris, France**. France's current currency is the **Euro (\u20ac)**, which it adopted in 2002, replacing the French franc. France is one of the 21 member states of the European Union that use the euro as their primary currency and sole legal tender.\n\nSources: [Eiffel Tower](https://en.wikipedia.org/wiki/Eiffel_Tower), [French franc](https://en.wikipedia.org/wiki/French_franc), and [Eurozone](https://en.wikipedia.org/wiki/Eurozone) articles on Wikipedia."
+        },
+        {
+          "name": "world_wars_gap",
+          "category": "computation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both key dates are directly supported by the retrieved text: WWI began on \"28 July 1914\" (from Causes of World War I) and WWII began on \"1 September 1939\" (from World War II), and the calculated difference of 25 years follows directly from those dates."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 3.828,
+          "answer": "Based on the Wikipedia search results:\n\n- **World War I** began on **28 July 1914**\n- **World War II** began on **1 September 1939**\n\nThe time between these two dates is **25 years**.\n\n(Sources: \"Causes of World War I\" and \"World War II\" Wikipedia articles)"
+        },
+        {
+          "name": "newton_einstein_older_at_death",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The agent's birth and death dates for both Newton (4 January 1643 \u2013 31 March 1727) and Einstein (14 March 1879 \u2013 18 April 1955) are directly supported by the retrieved text, and the conclusion that Newton lived longer is a straightforward calculation from those dates; the only minor gap is that the retrieved text doesn't explicitly state the ages (84 and 76), but these are simple arithmetic derivations from the supported dates."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 3,
+          "seconds": 5.089,
+          "answer": "Based on the Wikipedia articles, here are the lifespans:\n\n- **Isaac Newton**: 4 January 1643 \u2013 31 March 1727 (lived 84 years)\n- **Albert Einstein**: 14 March 1879 \u2013 18 April 1955 (lived 76 years)\n\n**Isaac Newton lived longer** \u2013 he lived 84 years compared to Einstein's 76 years, a difference of 8 years.\n\nSources: [Isaac Newton](https://en.wikipedia.org/wiki/Isaac_Newton) and [Albert Einstein](https://en.wikipedia.org/wiki/Albert_Einstein) Wikipedia articles."
+        },
+        {
+          "name": "georgia_country_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The answer's claim that Tbilisi is the capital of Georgia is directly supported by the retrieved text, which states \"Another remarkable mountain is the Mtatsminda in the capital Tbilisi\" in the List of Mountains in Georgia article."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.346,
+          "answer": "The capital of Georgia (the nation in the Caucasus) is **Tbilisi**, as mentioned in the search results about mountains in Georgia.\n\nBased on: [Georgia (country)](https://en.wikipedia.org/wiki/Georgia_(country)) - Wikipedia"
+        },
+        {
+          "name": "washington_state_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The answer's key claim that Olympia is the state capital of Washington is directly supported by the retrieved text from the Washington (state) Wikipedia article, which states \"Olympia is the state capital.\""
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.342,
+          "answer": "The capital of the U.S. state of Washington is **Olympia**. This information comes from the Wikipedia article on [Washington (state)](https://en.wikipedia.org/wiki/Washington_(state)), which states that \"Olympia is the state capital.\""
+        },
+        {
+          "name": "shakespeare_100_sonnets",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer \u2014 154 sonnets published in 1609, six additional sonnets in Romeo and Juliet, Henry V, and Love's Labour's Lost, and a partial sonnet in Edward III \u2014 is directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.508,
+          "answer": "No, William Shakespeare did not write exactly 100 sonnets. According to Wikipedia's article on \"Shakespeare's sonnets,\" Shakespeare wrote **154 sonnets** that were first published together in a quarto in 1609. Additionally, there are six more sonnets that he wrote and included in his plays (Romeo and Juliet, Henry V, and Love's Labour's Lost), plus a partial sonnet in Edward III."
+        },
+        {
+          "name": "galileo_planet_discovery",
+          "category": "false_premise",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The retrieved text supports the claims about Jupiter's Galilean moons (Ganymede, Callisto, Io, Europa) being discovered in 1610 and being the first Solar System objects discovered since ancient times and first to orbit another planet, but the answer's framing that Galileo \"discovered a planet\" is somewhat misleading and the specific detail about these being \"the first Solar System objects discovered since ancient times\" is only partially matched (the text says \"since humans have started tracking the classical planets\"), while the core factual claims about the moons and their names are well-supported."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 3.87,
+          "answer": "Based on the Wikipedia search results, when Galileo Galilei pointed his telescope at the sky in 1610, he discovered the moons of **Jupiter**. Specifically, he discovered the four largest moons of Jupiter, which are now called the **Galilean moons**: Ganymede, Callisto, Io, and Europa. These were the first Solar System objects discovered since ancient times and the first objects found to orbit a planet other than Earth.\n\nSource: Wikipedia article on \"Galilean moons\""
+        },
+        {
+          "name": "nobel_mathematics",
+          "category": "unanswerable",
+          "passed": false,
+          "overall": 0.25,
+          "dimensions": {
+            "answer": {
+              "score": 0.0,
+              "reasons": [
+                "missing any of: ['no Nobel Prize in Mathematics', 'is no Nobel Prize in Math', 'does not exist', 'no such', 'not a Nobel', 'Fields Medal', 'was not awarded', 'there is no']"
+              ]
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.0,
+              "reasons": [
+                "The agent stopped without providing a final answer, and the retrieved text does not contain information about a Nobel Prize in Mathematics (which doesn't exist) nor does it specifically identify Fields Medal winners for the year 2000 \u2014 the text only mentions the 2002 Fields Medal recipients (Lafforgue and Voevodsky)."
+              ]
+            },
+            "calibration": {
+              "score": 0.0,
+              "reasons": [
+                "expected the answer to qualify that it can't find / doesn't exist"
+              ]
+            }
+          },
+          "n_tool_calls": 10,
+          "seconds": 13.661,
+          "answer": "(stopped: reached max tool-use turns without a final answer)"
+        },
+        {
+          "name": "mercury_element_atomic_number",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The retrieved text from the Mercury (element) Wikipedia article directly states \"Mercury is a chemical element; it has symbol Hg and atomic number 80. It is commonly known as quicksilver. A heavy, silvery d-block element, mercury is...\" which supports all key claims in the agent's answer."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.088,
+          "answer": "The atomic number of mercury (the chemical element) is **80**. Mercury has the chemical symbol Hg and is commonly known as quicksilver. It is a heavy, silvery liquid metal.\n\nSource: [Mercury (element)](https://en.wikipedia.org/wiki/Mercury_(element))"
+        },
+        {
+          "name": "java_island_country",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "All key claims in the answer \u2014 Java being in Indonesia, being the world's most populous island, having a projected population of ~158 million by mid-2025, and representing ~56% of Indonesia's population \u2014 are directly supported by the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.173,
+          "answer": "Based on the search results, **Java is located in Indonesia**. It is the world's most populous island, with a projected population of around 158 million by mid-2025, making it home to approximately 56% of Indonesia's population.\n\n(Source: Wikipedia article on Java)"
+        },
+        {
+          "name": "phoenix_state_capital",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Every claim in the answer is directly supported by the retrieved Wikipedia text, including Phoenix being the capital and most populous city of Arizona, and being the fifth-most populous city in the United States."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.197,
+          "answer": "Phoenix is the capital of **Arizona**. According to Wikipedia, Phoenix is the capital and most populous city of the U.S. state of Arizona, and it's also the fifth-most populous city in the United States overall."
+        },
+        {
+          "name": "paris_trojan_prince_city",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The retrieved text directly supports that Paris is of Troy and that \"her subsequent marriage to Paris of Troy was the most immediate cause of the Trojan War,\" and mentions Menelaus as king of Sparta; the only minor gap is the agent uses the word \"abduction\" while the text refers to \"marriage\" (though abduction is mentioned elsewhere in the article context)."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.219,
+          "answer": "In Greek mythology, Paris was a prince of **Troy**. His abduction of Helen (who was married to King Menelaus of Sparta) was the most immediate cause of the Trojan War.\n\nBased on: \"Helen of Troy\" article on Wikipedia."
+        },
+        {
+          "name": "amazon_river_continent",
+          "category": "disambiguation",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "The agent's answer directly quotes and paraphrases the retrieved Wikipedia text, which explicitly states that the Amazon River \"in South America is the largest river by discharge volume of water in the world.\""
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 1,
+          "seconds": 2.126,
+          "answer": "The Amazon River is located on **South America**. According to the Wikipedia article on the Amazon River, it \"in South America is the largest river by discharge volume of water in the world.\""
+        },
+        {
+          "name": "larger_russia_canada",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.925,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.7,
+              "reasons": [
+                "The claim that Canada is \"the world's second-largest country by area\" is supported by the retrieved text (from \"Provinces and territories of Canada\"), and Russia being described as \"Largest country in the world by area\" appears in the \"List of Asian countries by area\" snippet, so both key claims have some grounding, though the core \"List of countries and dependencies by area\" extract doesn't explicitly state these rankings."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 2.614,
+          "answer": "Based on the Wikipedia search results, **Russia is larger by total area than Canada**. According to the \"List of countries and dependencies by area\" article, Russia is described as the \"Largest country in the world by area,\" while Canada is identified as \"the world's second-largest country by area.\""
+        },
+        {
+          "name": "larger_jupiter_saturn",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.975,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.9,
+              "reasons": [
+                "The key claims are well supported: Jupiter's diameter being 11 times Earth's is directly stated in the Jupiter extract, Saturn being \"the second largest in the Solar System, after Jupiter\" is directly stated in the Saturn extract, and Saturn's average radius being about 9 times Earth's is also in the Saturn extract; the only slight issue is the agent's minor arithmetic note about Saturn's diameter being \"18 times Earth's radius\" which is an awkward phrasing but doesn't contradict the text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 5,
+          "seconds": 9.369,
+          "answer": "Perfect! Now I have the clear answer:\n\n**Jupiter is larger by diameter.**\n\nAccording to Wikipedia:\n- **Jupiter** has a diameter of **11 times that of Earth** and is the **largest planet in the Solar System**\n- **Saturn** has an average radius of about **9 times that of Earth** (meaning a diameter of about 18 times Earth's radius, but Saturn is explicitly described as \"the second largest in the Solar System, after Jupiter\")\n\nSo Jupiter is the larger of the two planets by diameter."
+        },
+        {
+          "name": "larger_pacific_atlantic",
+          "category": "comparison",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both key claims in the answer \u2014 that the Pacific Ocean is \"the largest and deepest of Earth's five oceanic divisions\" and that the Atlantic Ocean is \"the second largest\u2026with an area of about 85,133,000 square kilometers\" \u2014 are directly quoted from the retrieved Wikipedia text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 3.03,
+          "answer": "The **Pacific Ocean** is larger by area. According to Wikipedia, the Pacific Ocean is \"the largest and deepest of Earth's five oceanic divisions,\" while the Atlantic Ocean is \"the second largest of the world's five oceanic divisions, with an area of about 85,133,000 square kilometers (32,870,000 sq mi).\"\n\nSources: [Pacific Ocean](https://en.wikipedia.org/wiki/Pacific_Ocean) and [Atlantic Ocean](https://en.wikipedia.org/wiki/Atlantic_Ocean) on Wikipedia."
+        },
+        {
+          "name": "born_first_galileo_newton",
+          "category": "comparison",
+          "passed": true,
+          "overall": 1.0,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 1.0,
+              "reasons": [
+                "Both birth dates cited in the answer (15 February 1564 for Galileo and 4 January 1643 for Newton) are directly supported by the retrieved Wikipedia text from the \"Galileo Galilei\" and \"Isaac Newton\" articles respectively."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 2.796,
+          "answer": "**Galileo Galilei was born first.**\n\nAccording to Wikipedia:\n- **Galileo Galilei** was born on 15 February 1564\n- **Isaac Newton** was born on 4 January 1643\n\nGalileo was born nearly 79 years before Newton."
+        },
+        {
+          "name": "hotter_sun_venus",
+          "category": "comparison",
+          "passed": true,
+          "overall": 0.988,
+          "dimensions": {
+            "answer": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "search": {
+              "score": 1.0,
+              "reasons": []
+            },
+            "grounding": {
+              "score": 0.95,
+              "reasons": [
+                "The key temperature figures are directly supported: the Sun's surface temperature of ~5800 K from the Sun article, and Venus's surface temperature of 740 K (467\u00b0C, 872\u00b0F) from the Atmosphere of Venus article; the claim about Venus's greenhouse effect and CO2 atmosphere is also supported, though the specific comparison ratio (\"nearly 8 times hotter\") and the statement about Venus being the hottest planet are not explicitly stated in the retrieved text."
+              ]
+            },
+            "calibration": {
+              "score": 1.0,
+              "reasons": []
+            }
+          },
+          "n_tool_calls": 2,
+          "seconds": 3.267,
+          "answer": "Based on the Wikipedia search results:\n\n**The Sun is much hotter at its surface than Venus.**\n\n- **Sun's surface temperature:** approximately 5,800 K (about 5,527\u00b0C or 9,980\u00b0F)\n- **Venus's surface temperature:** approximately 740 K (about 467\u00b0C or 872\u00b0F)\n\nThe Sun's surface is nearly 8 times hotter than Venus's surface. Venus is the hottest planet in our solar system due to its extreme greenhouse effect caused by its thick atmosphere of carbon dioxide, but it is still far cooler than the Sun's surface.\n\n(Sources: Wikipedia articles on \"Sun\" and \"Atmosphere of Venus\")"
+        }
+      ]
+    }
+  }
+}
