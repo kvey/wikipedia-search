@@ -7,26 +7,15 @@ single tool, `search_wikipedia(query)`, which hits the
 **multi-turn tool use** — Claude can search, read results, and search again before
 answering.
 
-## Layout
-
-```
-agent/
-  main.py        # entrypoint + the manual multi-turn tool-use loop (run_agent)
-  wikipedia.py   # MediaWiki API wrapper exposing search_wikipedia(query)
-  prompt.py      # system prompt, model id, and the tool schema
-  trace.py       # per-run JSON trace logging
-evals/
-  run_evals.py       # eval entrypoint — imports run_agent from agent/main.py
-  grading.py         # four scoring dimensions, LLM grounding judge + entity_coverage
-  regrade_traces.py  # retroactively score entity_coverage over saved traces/
-  cases.py           # the evaluation dataset
-traces/              # JSON trace files, one per run (git-ignored)
-```
-
 ## Setup
 
-Requires [uv](https://docs.astral.sh/uv/) and an Anthropic API key. Copy the
-example env file and fill in your key:
+Requires [uv](https://docs.astral.sh/uv/) and an Anthropic API key.
+
+```
+curl -LsSf https://astral.sh/uv/install.sh | sh
+```
+
+Copy the example env file and fill in your key:
 
 ```bash
 cp .env.example .env
@@ -34,11 +23,7 @@ cp .env.example .env
 ```
 
 The agent loads `<repo>/.env` automatically at startup (via `python-dotenv`), so
-no `export` is needed. `.env` is git-ignored; an exported `ANTHROPIC_API_KEY` in
-the shell still takes precedence over the file. `uv` resolves and installs
-dependencies automatically on first run — including spaCy and the pinned
-`en_core_web_sm` model (declared as dependencies, so no separate
-`spacy download` step is needed) used by the `entity_coverage` metric.
+no `export` is needed.
 
 ## Run the agent
 
@@ -79,8 +64,7 @@ uv run evals/run_evals.py --judge-model opus    # judge with a different model
 uv run evals/run_evals.py --concurrency 8       # more parallelism
 ```
 
-Cases run **concurrently** across all model×case pairs. `--concurrency` (default
-4) caps how many run at once — i.e. the number of API requests in flight, which
+Cases run **concurrently** across all model×case pairs. `--concurrency` (default 4) caps how many run at once — i.e. the number of API requests in flight, which
 is the rate-limit lever: a few seconds per request times a small worker count
 keeps the effective rate well within tier limits. Beneath it, the Anthropic
 client retries 429/5xx with exponential backoff (`--max-retries`, default 6),
@@ -95,24 +79,24 @@ into an overall score (a case passes when the mean meets `--threshold`, default
 0.7):
 
 - **`answer`** — is the answer factually right? (keyword matching)
-- **`search`** — *how much did it search?* The tool-call count should land in the
+- **`search`** — _how much did it search?_ The tool-call count should land in the
   case's expected window; under-searching (answering from memory) and wasteful
   over-searching both lose points.
-- **`grounding`** — *how well is the answer supported by what Wikipedia returned?*
+- **`grounding`** — _how well is the answer supported by what Wikipedia returned?_
   An LLM judge rates the answer's claims against the retrieved passages (0-1 +
   rationale), catching answers that are correct but recalled rather than
   retrieved. Use `--no-grounding` for a deterministic proxy (no extra API calls).
-- **`calibration`** — *does it qualify when it can't find information?* Cases where
+- **`calibration`** — _does it qualify when it can't find information?_ Cases where
   the honest answer is "it doesn't exist / I can't find it" must hedge; answerable
   cases instead penalize a false abstention.
 
 Alongside those, one **auxiliary** metric is reported but **not folded into the
 overall mean** (so it never moves the headline score):
 
-- **`entity_coverage`** — *do the entities the answer asserts actually appear in the
-  retrieved text?* spaCy NER pulls the answer's named entities (people, places,
+- **`entity_coverage`** — _do the entities the answer asserts actually appear in the
+  retrieved text?_ spaCy NER pulls the answer's named entities (people, places,
   orgs, dates, quantities) and each is checked for a literal match in the sources;
-  a named entity or year present in *no* passage is a mechanical hallucination
+  a named entity or year present in _no_ passage is a mechanical hallucination
   signal. It's deterministic (fixed model weights, no API call) and the cheap,
   reproducible complement to the LLM `grounding` judge — its blind spot is
   paraphrase/aliases ("US" vs "United States"), so it's a precision-oriented check,
@@ -150,13 +134,3 @@ robustness: `false_premise` (the question states something untrue and the agent
 should correct it), `unanswerable` (the subject doesn't exist and the agent should
 say so rather than make something up), and `contrastive` (a factual case with one
 detail changed). See `docs/DESIGN.md` §5 for the grading fields.
-
-## Notes
-
-- Model: `claude-opus-4-7`. The loop is a standard manual agentic loop — append
-  the assistant turn, run requested tools, feed `tool_result` blocks back, repeat
-  until `stop_reason != "tool_use"` (bounded by `MAX_TURNS`).
-- The Wikipedia wrapper returns the top search hits plus a plain-text lead extract
-  of the best match, giving Claude enough context to answer in one search where
-  possible.
-# wikipedia-search
