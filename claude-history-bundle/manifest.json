@@ -1,0 +1,160 @@
+{
+  "created_at_utc": "2026-05-23T03:22:20.495901+00:00",
+  "source_bundle": "sanitized Claude project history before focused truncation",
+  "purpose": "Conversation-focused view with long file/context/tool blobs truncated or omitted.",
+  "limits": {
+    "max_user_text_chars": 6000,
+    "max_assistant_text_chars": 8000,
+    "max_tool_input_chars": 1200,
+    "max_tool_result_chars": 1200
+  },
+  "stats": {
+    "source_jsonl_files": 17,
+    "source_records": 2757,
+    "kept_records": 2667,
+    "skipped_records": 90,
+    "truncated_strings": 324,
+    "tool_results_collapsed": 635,
+    "tool_uses_summarized": 635,
+    "bytes_before": 8077718,
+    "bytes_after": 2370144
+  },
+  "included_files": [
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098/subagents/agent-a5c0828d8f7185bd0.jsonl",
+      "records": 46,
+      "bytes": 50078
+    },
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098/subagents/agent-a5c0828d8f7185bd0.meta.json",
+      "records": null,
+      "bytes": 82
+    },
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098/subagents/agent-a8d1dfd80536cce86.jsonl",
+      "records": 58,
+      "bytes": 54536
+    },
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098/subagents/agent-a8d1dfd80536cce86.meta.json",
+      "records": null,
+      "bytes": 93
+    },
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098/subagents/agent-ad3c5fe08b5dfe516.jsonl",
+      "records": 87,
+      "bytes": 72867
+    },
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098/subagents/agent-ad3c5fe08b5dfe516.meta.json",
+      "records": null,
+      "bytes": 87
+    },
+    {
+      "path": "conversations/0babd536-b390-4809-abb2-e31c9314d098.jsonl",
+      "records": 562,
+      "bytes": 484070
+    },
+    {
+      "path": "conversations/1b3f281d-cdec-4ff9-83f6-54370963330e.jsonl",
+      "records": 268,
+      "bytes": 315237
+    },
+    {
+      "path": "conversations/269d0e4f-7a37-41c5-9e19-68c20171d6aa.jsonl",
+      "records": 171,
+      "bytes": 123122
+    },
+    {
+      "path": "conversations/56338231-f9fa-4059-a54d-8140d466355e/subagents/agent-ac679ea7a0db7f090.jsonl",
+      "records": 45,
+      "bytes": 42095
+    },
+    {
+      "path": "conversations/56338231-f9fa-4059-a54d-8140d466355e/subagents/agent-ac679ea7a0db7f090.meta.json",
+      "records": null,
+      "bytes": 71
+    },
+    {
+      "path": "conversations/56338231-f9fa-4059-a54d-8140d466355e.jsonl",
+      "records": 212,
+      "bytes": 256934
+    },
+    {
+      "path": "conversations/7439aa96-46b9-43cb-a85d-9a6727f221c1.jsonl",
+      "records": 177,
+      "bytes": 148271
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-a24c31df36a85a154.jsonl",
+      "records": 35,
+      "bytes": 40431
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-a24c31df36a85a154.meta.json",
+      "records": null,
+      "bytes": 76
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-a73021ce37f554aad.jsonl",
+      "records": 55,
+      "bytes": 55458
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-a73021ce37f554aad.meta.json",
+      "records": null,
+      "bytes": 80
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-aaab196a59f830e5b.jsonl",
+      "records": 41,
+      "bytes": 42312
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-aaab196a59f830e5b.meta.json",
+      "records": null,
+      "bytes": 86
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-ad6ea4e4724fb13b5.jsonl",
+      "records": 77,
+      "bytes": 84511
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc/subagents/agent-ad6ea4e4724fb13b5.meta.json",
+      "records": null,
+      "bytes": 84
+    },
+    {
+      "path": "conversations/a8ab077a-d484-4122-b485-140760c77dcc.jsonl",
+      "records": 351,
+      "bytes": 275769
+    },
+    {
+      "path": "conversations/b558f95c-5615-4d2b-8d47-009bd695f939.jsonl",
+      "records": 330,
+      "bytes": 203584
+    },
+    {
+      "path": "conversations/ca1cb8e8-ffe8-43a8-9808-0b4b93b483d1/subagents/agent-ad69318d1eb103779.jsonl",
+      "records": 43,
+      "bytes": 40435
+    },
+    {
+      "path": "conversations/ca1cb8e8-ffe8-43a8-9808-0b4b93b483d1/subagents/agent-ad69318d1eb103779.meta.json",
+      "records": null,
+      "bytes": 70
+    },
+    {
+      "path": "conversations/ca1cb8e8-ffe8-43a8-9808-0b4b93b483d1.jsonl",
+      "records": 109,
+      "bytes": 79705
+    }
+  ],
+  "notes": [
+    "Built from the already-sanitized bundle, not from raw ~/.claude history.",
+    "File-history snapshots and Claude meta records were omitted.",
+    "Tool uses are summarized and long tool results/stdout/stderr are truncated.",
+    "The earlier full sanitized history copy was removed; this bundle contains only the focused history."
+  ]
+}

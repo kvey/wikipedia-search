@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "slides:dev": "CHOKIDAR_USEPOLLING=1 slidev slides.md",
+    "slides:dev:3031": "CHOKIDAR_USEPOLLING=1 slidev slides.md --port 3031",
+    "slides:build": "slidev build slides.md --out dist/slides"
+  },
+  "devDependencies": {
+    "@slidev/cli": "^52.9.1"
+  },
+  "dependencies": {
+    "@slidev/theme-default": "^0.25.0"
+  }
+}

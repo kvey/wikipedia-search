@@ -6,10 +6,13 @@ Each case is a question graded along **four dimensions of correctness** (see
 - ``answer`` — keyword matching: the answer should contain all of `must_include`
   (case-insensitive substrings), at least one of `must_include_any` (if set),
   and none of `must_exclude`.
-- ``search`` — *how much it searched*: the tool-call count should fall in
-  `[min_searches, max_searches]`. `min_searches` defaults to 1 when
-  `expect_tool_use` is set; multi-hop cases raise it. `max_searches` flags
-  over-searching when set.
+- ``search`` — *how much it searched*: the number of search *steps*
+  (`search_wikipedia` calls) should fall in `[min_searches, max_searches]`. A
+  single fan-out call carrying several query phrasings counts as one step, and
+  `get_article` drill-downs don't count toward this window. `min_searches`
+  defaults to 1 when `expect_tool_use` is set; multi-hop cases raise it (and
+  still require that many distinct search steps — fan-out doesn't collapse two
+  hops into one). `max_searches` flags over-searching when set.
 - ``grounding`` — *how well the answer is supported by what Wikipedia actually
   returned*: an LLM judge rates the answer's claims against the retrieved
   passages (0-1 + rationale), catching facts recalled from parametric memory
@@ -54,10 +57,12 @@ class EvalCase:
     expect_tool_use: bool = True
     category: str = "factual"
     # --- search-behavior expectations (the `search` dimension) -------------
-    # How much the agent should search. `min_searches` defaults to 1 when
-    # `expect_tool_use` is set (every answer should be grounded in at least one
-    # lookup); raise it for multi-hop questions that genuinely need chaining.
-    # `max_searches`, when set, flags wasteful over-searching.
+    # How many search *steps* (search_wikipedia calls) the agent should make; a
+    # fan-out call with several query phrasings is one step and get_article does
+    # not count. `min_searches` defaults to 1 when `expect_tool_use` is set
+    # (every answer should be grounded in at least one lookup); raise it for
+    # multi-hop questions that genuinely need chaining. `max_searches`, when
+    # set, flags wasteful over-searching.
     min_searches: int | None = None
     max_searches: int | None = None
     # --- abstention expectation (the `calibration` dimension) --------------

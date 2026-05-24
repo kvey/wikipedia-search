@@ -7,3 +7,8 @@ traces/
 # Local secrets — keep the example, ignore the real file.
 .env
 !.env.example
+
+# Slidev / Node
+node_modules/
+dist/
+slides-export.*

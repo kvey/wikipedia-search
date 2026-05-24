@@ -88,6 +88,11 @@ class CaseResult:
     answer: str
     n_tool_calls: int
     seconds: float
+    # Search *steps* (search_wikipedia calls) and total query phrasings fanned
+    # out across them. With query fan-out and get_article these now diverge from
+    # n_tool_calls; the `search` dimension is scored on n_searches.
+    n_searches: int = 0
+    n_queries: int = 0
     use_tools: bool = True
     # True when the run ended in a transient infrastructure error (rate limit,
     # timeout, 5xx) that survived all retries. Such a result is *not* a model
@@ -122,12 +127,22 @@ def run_case(
         judge_model=judge_model,
         threshold=threshold,
     )
+    n_searches = sum(
+        1 for c in result.tool_calls if c.get("name") == "search_wikipedia"
+    )
+    n_queries = sum(
+        len(c.get("input", {}).get("queries", []))
+        for c in result.tool_calls
+        if c.get("name") == "search_wikipedia"
+    )
     return CaseResult(
         case=case,
         grade=case_grade,
         answer=result.answer,
         n_tool_calls=len(result.tool_calls),
         seconds=elapsed,
+        n_searches=n_searches,
+        n_queries=n_queries,
         use_tools=use_tools,
     )
 
@@ -330,7 +345,8 @@ def print_model_report(model: str, results: list[CaseResult], verbose: bool) -> 
         print(
             f"[{status}] {case.name} ({case.category}, "
             f"overall={res.grade.overall:.2f}, "
-            f"{res.n_tool_calls} search(es), {res.seconds:.1f}s)"
+            f"{res.n_searches} search step(s)/{res.n_queries} queries, "
+            f"{res.n_tool_calls} tool call(s), {res.seconds:.1f}s)"
         )
         print(f"        {_dims_line(res)}")
         print(f"        aux: {_aux_line(res)}  (not in overall)")
@@ -570,6 +586,8 @@ def _summarize(
                         for m in AUX_METRICS
                     },
                     "n_tool_calls": r.n_tool_calls,
+                    "n_searches": r.n_searches,
+                    "n_queries": r.n_queries,
                     "seconds": round(r.seconds, 3),
                     "answer": r.answer,
                 }

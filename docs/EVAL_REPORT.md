@@ -221,3 +221,122 @@ uv run evals/regrade_traces.py --chart "$out/entity_coverage_retro.png" \
 ```
 
 See `docs/DESIGN.md` for the grading internals and `README.md` for setup.
+
+---
+
+## 8. Post-tool-call improvement — query fan-out + per-article detail fetch
+
+§6 named **grounding** as the consistent weak point. This iteration acts on it by
+changing the *tool surface* the model calls, then re-measures with the same suite,
+judge, and threshold so the before/after is honest.
+
+### What changed (and why, from the traces)
+
+Mining the 433 archived traces surfaced two mechanical causes of un-grounded
+answers:
+
+1. **One query, one shot.** `search_wikipedia` took a single `query`. When it
+   missed, the model re-queried *sequentially* across turns. *"Who won the Nobel
+   Prize in Mathematics in 2000?"* never converged and **hit `MAX_TURNS` with no
+   answer** (twice).
+2. **Thin extracts.** Only the top hit got a lead extract; hits #2–4 were
+   snippet-only. *"longest river on the continent where the Sahara Desert is
+   located?"* had the answer (the Nile) sitting in a non-top hit's snippet but
+   never in the extracted text, forcing an extra turn.
+
+Two changes, kept inside the tool layer (model-agnostic, so they apply across all
+three models):
+
+- **`search_wikipedia(queries[])` — query fan-out.** Accepts several phrasings in
+  one call, runs each, and merges/dedupes hits by title (best rank wins), now
+  extracting the **top 2** merged articles instead of only #1.
+- **`get_article(title, section?)` — per-article detail fetch.** Pulls the fuller
+  article body (or a named section) when a snippet looks relevant but the lead
+  extract lacked the specific fact.
+
+The `search` dimension was redefined to count **search *steps*** (`search_wikipedia`
+calls), not raw tool calls: a fan-out call is one step and `get_article` is
+excluded — so multi-hop cases still demand genuine chaining and fan-out width is
+never penalized. `get_article` output still flows into the grounding judge and
+`entity_coverage`.
+
+### Results — before vs after
+
+Baseline = Run 2 (§4, 37 cases, 4 dimensions, LLM judge `claude-sonnet-4-6`).
+After = archived run `eval_results/2026-05-22T20-06-24_073937c-dirty/`, identical
+suite/judge/threshold.
+
+**`grounding` (the targeted dimension):**
+
+| Model | before | after | Δ |
+|---|---|---|---|
+| opus | 0.773 | **0.903** | **+0.130** |
+| sonnet | 0.842 | **0.884** | +0.042 |
+| haiku | 0.903 | **0.953** | +0.050 |
+
+Grounding rose for **every model**, most for **opus** — which was the weakest and
+the model that "reaches for tools less often." It's now the largest single
+improvement to the headline weak spot.
+
+**All dimensions:**
+
+| Model | overall | answer | search | grounding | calibration | Passed |
+|---|---|---|---|---|---|---|
+| opus | 0.926 → **0.952** | 1.00 → 1.00 | 0.932 → 0.932 | 0.773 → **0.903** | 1.00 → 0.973 | 37/37 → **37/37** |
+| sonnet | 0.947 → 0.941 | 0.986 → 0.986 | 0.986 → 0.919 | 0.842 → **0.884** | 0.973 → 0.973 | 36/37 → **37/37** |
+| haiku | 0.962 → **0.981** | 0.973 → 0.986 | 1.00 → 0.986 | 0.903 → **0.953** | 0.973 → 1.00 | 36/37 → **37/37** |
+
+- **All three models now pass 37/37** (sonnet and haiku each cleared a prior miss).
+- **No `MAX_TURNS` failures** — the Nobel-Mathematics dead-end now resolves in a
+  single 4-phrasing fan-out.
+- **`search` dips for sonnet/haiku** by design: a well-phrased fan-out resolves
+  some `multi_hop` cases in one step, scoring `search = 0.5` (it didn't take two
+  steps) while still passing on strong grounding. This is the deliberate "fan-out
+  isn't multi-hop chaining" trade-off, not a regression in search behavior.
+
+### `entity_coverage` — and a metric fix it forced
+
+Re-running the retroactive aggregation on the new traces exposed a flaw in the
+metric itself: the **single most-flagged "uncovered entity" was the literal token
+`Wikipedia`** (111 of 116 traces). That's the citation footer ("Sources: Wikipedia
+articles …"), not a hallucination — and "Wikipedia" never appears in the retrieved
+article *text*, so it was counted as ungrounded every time, depressing the score
+with pure boilerplate.
+
+Fix (in `grade_entity_coverage`): strip a trailing `Sources:/Citations:/References:`
+footer and stoplist the token `Wikipedia` before NER. The narrow footer regex
+leaves prose like "Sources of the Nile are…" untouched. After the fix, **zero**
+traces flag `Wikipedia`, and the remaining sub-1.0 flags are genuine — date/number
+formatting (`January 1643`, `7,088 kilometers` vs `7,088 km`) and true recall (the
+Nobel answer naming 2000 Fields medalists never retrieved).
+
+Effect of the fix alone, on the same new traces: mean **0.684 → 0.802** (+0.118).
+
+Apples-to-apples with the *fixed* metric (pre-change traces vs post-change traces,
+retrieval-bearing only) isolates the **agent** change:
+
+| Model | old agent | new agent | Δ |
+|---|---|---|---|
+| opus | 0.712 | 0.740 | +0.028 |
+| sonnet | 0.758 | 0.825 | +0.067 |
+| haiku | 0.858 | 0.851 | −0.007 |
+| **overall** | **0.769** (n=323) | **0.802** (n=116) | **+0.033** |
+
+A modest lift for opus/sonnet and flat for haiku (already high, and the verbosity
+effect from §5 still applies). The bigger story here is the **metric fix**: the
+`Wikipedia` boilerplate was masking the true grounding level.
+
+> Note: the archived sweep dashboard shows the *pre-fix* `entity_coverage`
+> (0.63/0.71/0.73); the numbers above are the same traces re-scored with the fixed
+> metric.
+
+### Net read
+
+The change does what §6 asked for: it **lifts grounding across all models** (the
+named weak point), eliminates the only hard failures (`MAX_TURNS`), and takes every
+model to a clean 37/37 — at the cost of a small, intentional `search`-dimension dip
+where fan-out short-circuits a multi-hop chain. `answer` is unchanged (the models
+already knew the facts; §4's ablation finding still holds — this improves
+*grounding*, not raw correctness). Caveats: a single post-change sweep carries LLM-
+judge variance, and `search`'s new meaning makes its column not directly comparable
+to pre-change runs.

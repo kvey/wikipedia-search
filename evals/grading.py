@@ -7,9 +7,12 @@ averages them into an overall score:
 
 - ``answer`` — keyword correctness. Fraction of the case's `must_include`,
   `must_include_any`, and `must_exclude` constraints that hold. Deterministic.
-- ``search`` — *how much it searched*. Whether the tool-call count lands in the
-  case's `[min_searches, max_searches]` window: under-searching (answering from
-  parametric memory) and wasteful over-searching are both penalized.
+- ``search`` — *how much it searched*. Whether the number of `search_wikipedia`
+  calls lands in the case's `[min_searches, max_searches]` window: under-searching
+  (answering from parametric memory) and wasteful over-searching are both
+  penalized. Counts *search steps*, not total tool calls — a single fan-out call
+  with several queries is one step, and `get_article` drill-downs don't count
+  (they deepen grounding rather than widen the search).
 - ``grounding`` — *how well the answer is supported by what Wikipedia returned*.
   An LLM judge rates the answer's factual claims against the concatenated
   retrieved passages (0-1 + a short rationale). This is the one dimension that
@@ -170,8 +173,14 @@ def grade_answer(case: EvalCase, answer: str) -> DimensionScore:
     return DimensionScore("answer", score, reasons)
 
 
-def grade_search(case: EvalCase, n_tool_calls: int) -> DimensionScore:
-    """Score whether the search count lands in the expected window.
+def grade_search(case: EvalCase, n_searches: int) -> DimensionScore:
+    """Score whether the number of search steps lands in the expected window.
+
+    `n_searches` is the count of `search_wikipedia` calls (search *steps*), not
+    total tool calls: a single fan-out call carrying several queries is one
+    step, and `get_article` drill-downs are excluded. This keeps multi-hop cases
+    honest — `min_searches=2` still demands two genuine search steps and is not
+    satisfied by fanning synonyms out in one call.
 
     Under-searching scales linearly toward zero (0 searches when ≥1 is expected
     is a hard 0); over-searching past `max_searches` is penalized more gently,
@@ -181,15 +190,15 @@ def grade_search(case: EvalCase, n_tool_calls: int) -> DimensionScore:
     hi = case.max_searches
     reasons: list[str] = []
 
-    if lo and n_tool_calls < lo:
-        score = n_tool_calls / lo
+    if lo and n_searches < lo:
+        score = n_searches / lo
         reasons.append(
-            f"under-searched: {n_tool_calls} of ≥{lo} expected search(es)"
+            f"under-searched: {n_searches} of ≥{lo} expected search(es)"
         )
-    elif hi is not None and n_tool_calls > hi:
-        score = max(0.0, 1.0 - 0.25 * (n_tool_calls - hi))
+    elif hi is not None and n_searches > hi:
+        score = max(0.0, 1.0 - 0.25 * (n_searches - hi))
         reasons.append(
-            f"over-searched: {n_tool_calls} searches, expected ≤{hi}"
+            f"over-searched: {n_searches} searches, expected ≤{hi}"
         )
     else:
         score = 1.0
@@ -362,6 +371,26 @@ _GROUNDED_LABELS = frozenset({
 # Markdown decoration to strip before extraction so "**Canberra**" parses cleanly.
 _MARKDOWN_RE = re.compile(r"[*_`#>]+|\[|\]|\((?:https?://)[^)]*\)")
 
+# Trailing citation footer to strip before extraction. The system prompt asks the
+# agent to "Cite the Wikipedia article title(s)", so answers routinely end with a
+# "Sources: Wikipedia articles …" line. That footer is metadata, not a substantive
+# claim — and the literal token "Wikipedia" never appears in the retrieved article
+# *text*, so left in it was the single most-flagged "uncovered entity" across the
+# trace history, depressing the metric with pure boilerplate. We strip a footer
+# that starts (at a line break or after a sentence) with Source(s)/Citation(s)/
+# Reference(s) followed by ':' or '-' — narrow enough not to touch prose like
+# "Sources of the Nile are…".
+_CITATION_FOOTER_RE = re.compile(
+    r"(?:^|\n|\.\s)\s*(?:sources?|citations?|references?)\s*[:\-].*\Z",
+    re.IGNORECASE | re.DOTALL,
+)
+
+# Boilerplate "entities" that are never substantive claims to ground. "Wikipedia"
+# is the corpus itself, named in citations, not a fact the answer asserts; it is
+# stoplisted so a stray mention in prose (e.g. "according to Wikipedia") doesn't
+# count as ungrounded either.
+_ENTITY_STOPLIST = frozenset({"wikipedia"})
+
 
 def _nlp():
     """Return the cached spaCy pipeline, loading it on first use."""
@@ -381,7 +410,10 @@ def _extract_entities(text: str) -> list[str]:
     sources just scores as covered — so the point is simply to surface the
     *uncovered* ones. Returns entity surface forms, order-preserved and deduped.
     """
-    clean = _MARKDOWN_RE.sub(" ", text)
+    # Drop the citation footer first, then markdown decoration, so neither the
+    # boilerplate "Sources: Wikipedia …" line nor "**bold**" reach the NER pass.
+    clean = _CITATION_FOOTER_RE.sub("", text)
+    clean = _MARKDOWN_RE.sub(" ", clean)
     seen: dict[str, None] = {}  # preserve order, dedupe case-insensitively
     for ent in _nlp()(clean).ents:
         if ent.label_ not in _GROUNDED_LABELS:
@@ -389,7 +421,7 @@ def _extract_entities(text: str) -> list[str]:
         # Collapse internal whitespace (a span can run across a newline into the
         # citation footer) and trim surrounding punctuation before matching.
         surface = " ".join(ent.text.split()).strip(".,;:!?\"'()[]")
-        if surface:
+        if surface and surface.lower() not in _ENTITY_STOPLIST:
             seen.setdefault(surface, None)
     return list(seen)
 
@@ -437,9 +469,14 @@ def grade(
     a case "passes" when that mean meets `threshold`.
     """
     retrieved = "\n\n".join(c.get("output", "") for c in tool_calls)
+    # The `search` dimension counts search *steps* (search_wikipedia calls), not
+    # total tool calls: fan-out width isn't counted and get_article is excluded.
+    # All tool outputs (including get_article) still feed `retrieved`, so a
+    # drill-down strengthens grounding and entity_coverage.
+    n_searches = sum(1 for c in tool_calls if c.get("name") == "search_wikipedia")
     dims = {
         "answer": grade_answer(case, answer),
-        "search": grade_search(case, len(tool_calls)),
+        "search": grade_search(case, n_searches),
         "grounding": grade_grounding(
             case, answer, retrieved, client=client, judge_model=judge_model
         ),

@@ -1,0 +1,471 @@
+/* ---------- canvas ---------- */
+/* Apply to every slide. The `class: deck` headmatter only tags slide 1,
+   so the deck background must target .slidev-layout directly. */
+.slidev-layout {
+  padding: 0;
+  background:
+    radial-gradient(120% 90% at 100% 0%, rgba(193, 97, 58, 0.07), transparent 55%),
+    #f1efe7;
+  color: #20201d;
+  font-family: 'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+#slidev-goto-dialog {
+  display: none !important;
+}
+.canvas {
+  height: 100%;
+  padding: 44px 64px 38px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+.canvas h1, .canvas h2, .canvas h3, .canvas p { margin: 0; }
+
+/* ---------- masthead / kicker ---------- */
+.masthead, .kicker {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.masthead { justify-content: space-between; }
+.masthead-tag {
+  font-size: 0.74rem;
+  letter-spacing: 0.04em;
+  color: #5f5a48;
+  font-variant-numeric: tabular-nums;
+}
+.eyebrow {
+  color: #b9572f;
+  font-size: 0.74rem;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+.kicker .num {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.74rem;
+  font-weight: 500;
+  color: #b9572f;
+  padding: 3px 8px;
+  border: 1px solid rgba(185, 87, 47, 0.35);
+  border-radius: 3px;
+}
+
+/* ---------- headings ---------- */
+.canvas h1 {
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 4.6rem;
+  line-height: 1;
+  font-weight: 500;
+  letter-spacing: -0.015em;
+  font-optical-sizing: auto;
+  white-space: nowrap;
+}
+.canvas h2 {
+  font-family: 'Fraunces', Georgia, serif;
+  max-width: 900px;
+  font-size: 2.35rem;
+  line-height: 1.07;
+  font-weight: 480;
+  letter-spacing: -0.01em;
+  font-optical-sizing: auto;
+  color: #20201d;
+}
+.canvas h3 {
+  font-size: 0.74rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  color: #5f5a48;
+}
+
+/* ---------- cover ---------- */
+.cover { justify-content: space-between; }
+.cover-body .eyebrow { display: block; margin-bottom: 16px; }
+.cover-body .subtitle {
+  max-width: 660px;
+  margin-top: 52px;
+  font-size: 1.32rem;
+  line-height: 1.4;
+  color: #57544c;
+  font-weight: 350;
+}
+.subtitle em { font-style: italic; color: #b9572f; }
+.cover-body .cover-result {
+  max-width: 660px;
+  margin-top: 24px;
+  font-size: 1.12rem;
+  line-height: 1.42;
+  color: #3a3730;
+}
+.cover-result b { color: #43705a; font-weight: 600; }
+.ledger {
+  display: flex;
+  margin-top: 12px;
+  border-top: 1px solid #d8d3c4;
+  border-bottom: 1px solid #d8d3c4;
+}
+.ledger > div { flex: 1; padding: 18px 0; }
+.ledger > div + div {
+  border-left: 1px solid #d8d3c4;
+  padding-left: 22px;
+}
+.ledger b {
+  display: block;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 2.6rem;
+  font-weight: 500;
+  line-height: 1;
+  color: #20201d;
+  font-variant-numeric: tabular-nums;
+}
+.ledger span {
+  display: block;
+  margin-top: 8px;
+  font-size: 0.86rem;
+  color: #5f5a48;
+}
+.footrule {
+  color: #756f5c;
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+
+/* ---------- two-column editorial ---------- */
+.two-col {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 40px;
+}
+.wide-left { grid-template-columns: 1.15fr 0.85fr; }
+.col {
+  border-top: 2px solid #20201d;
+  padding-top: 16px;
+}
+.col p, .col li {
+  color: #4a473f;
+  font-size: 1.04rem;
+  line-height: 1.5;
+  margin-top: 12px;
+}
+.canvas ul { margin: 0; padding-left: 1.1em; list-style: none; }
+.canvas li { position: relative; }
+.canvas li::before {
+  content: '';
+  position: absolute;
+  left: -1.1em;
+  top: 0.62em;
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: #b9572f;
+}
+.canvas li + li { margin-top: 10px; }
+.canvas code {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.92em;
+  color: #b9572f;
+  font-weight: 500;
+  background: rgba(185, 87, 47, 0.08);
+  padding: 1px 6px;
+  border-radius: 4px;
+}
+
+/* ---------- prompt excerpt ---------- */
+.prompt-layout {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1.45fr) minmax(250px, 0.75fr);
+  gap: 26px;
+  align-items: stretch;
+}
+.prompt-card {
+  margin: 0;
+  padding: 18px 20px;
+  border: 1px solid #d8d3c4;
+  border-left: 4px solid #b9572f;
+  border-radius: 7px;
+  background: #fbfaf6;
+  color: #2d2b26;
+  overflow: hidden;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.66rem;
+  line-height: 1.42;
+  display: flex;
+  flex-direction: column;
+  gap: 0.16rem;
+  justify-content: center;
+}
+.prompt-card span {
+  display: block;
+}
+.prompt-card .gap {
+  margin-top: 14px;
+}
+.prompt-card .indent {
+  padding-left: 1.2em;
+}
+/* Inline highlights in the prompt, keyed by number to the notes. */
+.prompt-card .hl {
+  background: rgba(193, 97, 58, 0.20);
+  border-radius: 3px;
+  padding: 0.5px 3px;
+  color: #20201d;
+  box-decoration-break: clone;
+  -webkit-box-decoration-break: clone;
+}
+.note-num {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: #b9572f;
+  color: #fff;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 600;
+  line-height: 1;
+  border-radius: 50%;
+}
+/* Inline marker: a clay superscript number keyed to the note badge. */
+.prompt-card .hl-n {
+  color: #b9572f;
+  font-family: 'IBM Plex Mono', monospace;
+  font-weight: 700;
+  font-size: 0.85em;
+  vertical-align: super;
+  margin-left: 2px;
+}
+
+/* Notes: each carries the matching number badge in the gutter facing
+   the prompt, so the highlight ↔ note link is explicit (no fake arrows). */
+.prompt-notes {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  border-top: 2px solid #20201d;
+}
+.prompt-notes > div {
+  position: relative;
+  padding: 9px 0 9px 32px;
+  border-bottom: 1px solid #d8d3c4;
+}
+.prompt-notes > div:last-child { border-bottom: 0; }
+.note-num {
+  position: absolute;
+  left: 0;
+  top: 10px;
+  width: 20px;
+  height: 20px;
+  font-size: 0.74rem;
+}
+.prompt-notes b {
+  display: block;
+  color: #20201d;
+  font-size: 0.8rem;
+  font-weight: 650;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+}
+.prompt-notes > div > span:not(.note-num) {
+  display: block;
+  margin-top: 5px;
+  color: #4a473f;
+  font-size: 0.88rem;
+  line-height: 1.32;
+}
+
+/* ---------- flow ---------- */
+.flow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 18px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.96rem;
+}
+.flow span {
+  position: relative;
+  color: #20201d;
+  font-weight: 500;
+  padding: 9px 16px;
+  background: #fbfaf6;
+  border: 1px solid #ddd8c9;
+  border-radius: 6px;
+}
+.flow span:not(:last-child)::after {
+  content: '→';
+  position: absolute;
+  right: -16px;
+  top: 50%;
+  transform: translateY(-50%);
+  color: #b07a63;
+  font-weight: 600;
+}
+.flow.tight { font-size: 0.88rem; gap: 18px; }
+
+/* ---------- chips ---------- */
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  margin-top: 18px;
+}
+.chips span {
+  border: 1px solid #ddd8c9;
+  border-radius: 999px;
+  padding: 7px 14px;
+  background: #fbfaf6;
+  font-size: 0.92rem;
+  font-weight: 500;
+  color: #4a473f;
+}
+
+/* ---------- dimensions ---------- */
+.dimensions {
+  display: grid;
+  grid-template-columns: 108px 1fr;
+  row-gap: 12px;
+  column-gap: 16px;
+  margin-top: 18px;
+}
+.dimensions dt {
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 0.92rem;
+  color: #b9572f;
+  font-weight: 500;
+}
+.dimensions dd {
+  margin: 0;
+  color: #4a473f;
+  font-size: 0.98rem;
+}
+
+/* ---------- callout / insight ---------- */
+.callout, .insight {
+  border-left: 3px solid #b9572f;
+  background: rgba(193, 97, 58, 0.07);
+  padding: 13px 20px;
+  border-radius: 0 7px 7px 0;
+  color: #3a3730;
+  font-size: 1.02rem;
+  line-height: 1.4;
+}
+.callout strong, .insight strong, .callout b, .insight b { color: #b9572f; font-weight: 600; }
+
+/* ---------- exhibit (charts) ---------- */
+.exhibit {
+  margin: 0;
+  border: 1px solid #e2ddce;
+  border-radius: 10px;
+  background: #fff;
+  overflow: hidden;
+  box-shadow: 0 14px 34px rgba(32, 32, 29, 0.10);
+}
+.exhibit img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+/* Frames hug each chart's native aspect ratio so there is no dead
+   whitespace inside the card. dashboards = 1800x1200 (3:2),
+   entity chart = 1560x600 (13:5). */
+.exhibit.fill {
+  flex: 1 1 0;
+  min-height: 180px;
+  align-self: center;
+  width: auto;
+  max-width: 100%;
+  aspect-ratio: 3 / 2;
+}
+.entity-chart {
+  margin-top: 10px;
+  align-self: start;
+  width: auto;
+  max-width: 100%;
+  height: 116px;
+  aspect-ratio: 13 / 5;
+}
+.caption {
+  color: #57544c;
+  font-size: 1rem;
+  line-height: 1.4;
+}
+.caption b { color: #20201d; font-weight: 600; }
+
+/* ---------- ablation compare ---------- */
+.compare {
+  flex: 1;
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  gap: 28px;
+  margin: 8px 0;
+}
+.metric {
+  border-top: 2px solid #20201d;
+  padding-top: 18px;
+}
+.metric p { color: #57544c; font-size: 1rem; margin-top: 8px; }
+.versus {
+  font-family: 'Fraunces', Georgia, serif;
+  font-style: italic;
+  font-size: 1.3rem;
+  color: #756f5c;
+}
+.big-number {
+  margin-top: 16px;
+  font-family: 'Fraunces', Georgia, serif;
+  font-size: 5.4rem;
+  line-height: 0.9;
+  font-weight: 500;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: -0.02em;
+}
+.good { color: #43705a; }
+.warn { color: #c0613a; }
+
+/* ---------- result layout ---------- */
+.result-layout {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) 268px;
+  gap: 30px;
+  align-items: center;
+}
+.result-layout .exhibit {
+  align-self: center;
+  width: 100%;
+  max-height: 100%;
+  aspect-ratio: 3 / 2;
+}
+.result-stats {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 0;
+}
+.result-stats > div {
+  padding: 12px 0;
+  border-top: 1px solid #d8d3c4;
+}
+.result-stats > div:last-child { border-bottom: 1px solid #d8d3c4; }
+.result-stats .lbl {
+  display: block;
+  font-size: 0.82rem;
+  color: #5f5a48;
+  letter-spacing: 0.04em;
+}
+.result-stats b {
+  display: block;
+  margin-top: 6px;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 1.18rem;
+  font-weight: 500;
+  color: #20201d;
+  font-variant-numeric: tabular-nums;
+}
+.result-stats b i { font-style: normal; color: #b9572f; padding: 0 2px; }
+.result-stats .hl b { color: #43705a; }

@@ -27,7 +27,7 @@ import anthropic
 from agent.env import load_env
 from agent.prompt import MODEL, NO_TOOLS_SYSTEM_PROMPT, SYSTEM_PROMPT, TOOLS
 from agent.trace import DEFAULT_TRACE_DIR, RunTrace
-from agent.wikipedia import search_wikipedia
+from agent.wikipedia import get_article, search_wikipedia
 
 # Load <repo>/.env at import time so the CLI and the eval harness (which imports
 # this module) both pick up ANTHROPIC_API_KEY without an explicit export.
@@ -36,6 +36,7 @@ load_env()
 # Maps tool names from the schema to their Python implementations.
 TOOL_IMPLEMENTATIONS = {
     "search_wikipedia": search_wikipedia,
+    "get_article": get_article,
 }
 
 MAX_TURNS = 10  # safety bound on the tool-use loop
@@ -199,7 +200,12 @@ def main(argv: list[str]) -> int:
     result = run_agent(question, verbose=True, on_tool_call=print_tool_call)
 
     if result.tool_calls:
-        print(f"\n[{len(result.tool_calls)} Wikipedia search(es)]", file=sys.stderr)
+        n_search = sum(c["name"] == "search_wikipedia" for c in result.tool_calls)
+        n_other = len(result.tool_calls) - n_search
+        extra = f", {n_other} get_article call(s)" if n_other else ""
+        print(
+            f"\n[{n_search} Wikipedia search(es){extra}]", file=sys.stderr
+        )
     print("\n=== Answer ===", file=sys.stderr)
     print(result.answer)
     return 0

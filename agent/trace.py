@@ -74,6 +74,11 @@ class RunTrace:
             "stop_reason": self.stop_reason,
             "turns_taken": len(self.turns),
             "tool_call_count": len(self.tool_calls),
+            # Search *steps* (search_wikipedia calls) vs total tool calls: with
+            # query fan-out and get_article drill-downs these now differ.
+            "search_count": sum(
+                1 for c in self.tool_calls if c.get("name") == "search_wikipedia"
+            ),
             "usage": {
                 "input_tokens": self.input_tokens,
                 "output_tokens": self.output_tokens,
